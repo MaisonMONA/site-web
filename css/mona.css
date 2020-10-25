@@ -1,0 +1,12 @@
+a {
+    color: #d3d5d9
+}
+
+
+.breadcrumb {
+    background-color: #b2b8d9;
+}
+
+.breadcrumb-item.active {
+    color: #212529;
+}
