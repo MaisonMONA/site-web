@@ -11,19 +11,19 @@
   <title>MONA | accueil</title>
 
   <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template: Modern Business -->
-  <link href="css/modern-business.css" rel="stylesheet">
+  <link href="./css/modern-business.css" rel="stylesheet">
 
   <!-- notre fichier CSS:  MONA -->
-  <link href="css/mona.css" rel="stylesheet">
+  <link href="./css/mona.css" rel="stylesheet">
 
 </head>
-
 <body>
 
   <!-- Navigation -->
+
   <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="index.html">
@@ -31,7 +31,8 @@
             <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
             <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
           </svg> MONA</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <!-- 
+          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -78,96 +79,99 @@
             </div>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
   </nav>
 
+
   <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
+    <img src="./img/carousel/1.png" class="img-fluid">
+<!--     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators" class="mona-purple">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner" role="listbox">
+      <div class="carousel-inner" role="listbox">-->
         <!-- Slide One - Set the background image for this slide in the line below -->
-        <div class="carousel-item active" style="background-image: url('./img/carousel/1.png')">
+<!--        <div class="carousel-item active" style="background-image: url('./img/carousel/1.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3 style="color: #212529;">Téléchargez l'application</h3>
-            <p></p>
+            <h3 class="mona-purple">Téléchargez l'application</h3>
           </div>
-        </div>
+        </div>-->
         <!-- Slide Two - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('./img/carousel/2.png')">
+<!--        <div class="carousel-item" style="background-image: url('./img/carousel/2.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Organisez une activité</h3>
+            <h3 class="mona-purple">Organisez une activité</h3>
           </div>
-        </div>
+        </div>-->
         <!-- Slide Three - Set the background image for this slide in the line below -->
-        <div class="carousel-item" style="background-image: url('./img/carousel/3.png')">
+<!--        <div class="carousel-item" style="background-image: url('./img/carousel/3.png')">
           <div class="carousel-caption d-none d-md-block">
-            <h3>Pour en savoir plus</h3>
+            <h3 class="mona-purple">Pour en savoir plus</h3>
           </div>
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+        <span class="sr-only mona-yellow">Previous</span>
       </a>
       <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
       </a>
-    </div>
+    </div> -->
   </header>
 
   <!-- Page Content -->
   <div class="container">
 
-    <h1 class="my-4">Bienvenue!</h1>
+    <h1 class="my-4 mona-purple">Bienvenue!</h1>
 
     <!-- Marketing Icons Section -->
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
+          <h4 class="card-header">L'application mobile</h4>
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            <p class="card-text">Télécharger l'app gratuite</p>
+              <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr"><img src="img/AppStore.png" width="150px"></a>
+              <a target="_blank" rel="noopener googlenoreferrer" href="https://play.google.com/store/apps/details?id=com.maison.mona"><img src="img/GooglePlay.png" width="150px"></a>
+            
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a href="#" class="btn btn-primary">Comment ça marche?</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
+          <h4 class="card-header">Les activités</h4>
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
+            <p class="card-text">Partir en excursion artistique avec MONA</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a data-toggle="tooltip" title="Télécharger le pdf" href="./files/MONA_Presentation.pdf" class="btn btn-primary" download="">En savoir plus</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
+          <h4 class="card-header">La Maison MONA</h4>
           <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
+            <p class="card-text">Notre organisme sans but lucratif</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
+            <a data-toggle="tooltip" title="Télécharger le pdf" href="./files/MONA_Presentation.pdf" class="btn btn-primary" download="">À propos</a>
           </div>
         </div>
       </div>
     </div>
     <!-- /.row -->
 
-    <!-- Portfolio Section -->
-    <h2>Portfolio Heading</h2>
+    <!-- Portfolio Section 
+    <h2>Portfolio Heading</h2>-->
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
           <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
@@ -234,11 +238,11 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <!-- /.row -->
 
     <!-- Features Section -->
-    <div class="row">
+    <!-- <div class="row">
       <div class="col-lg-6">
         <h2>Modern Business Features</h2>
         <p>The Modern Business template by Start Bootstrap includes:</p>
@@ -256,7 +260,7 @@
       <div class="col-lg-6">
         <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
       </div>
-    </div>
+    </div> -->
     <!-- /.row -->
 
     <hr>
@@ -264,10 +268,12 @@
     <!-- Call to Action Section -->
     <div class="row mb-4">
       <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+        <p><i>Ce site est en cours de construction</i>.</p>
+        <p>Pour toute question ou pour nous partager vos expériences, vous pouvez contacter l'équipe MONA par <a href="mailto:info@monamontreal.org">courriel</a> ou sur les réseaux sociaux, #monamtl.</p>
       </div>
-      <div class="col-md-4">
-        <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
+      <div>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MONA.ArtPublic/"><i class="bi bi-facebook"></i></a>
+        <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/MONA.ArtPublic/"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
 
@@ -277,7 +283,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
-      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white">Maison MONA - 2021</p>
     </div>
     <!-- /.container -->
   </footer>
