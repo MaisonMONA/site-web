@@ -1,12 +1,33 @@
+.mona-yellow {
+    color: #FFBF00;
+}
+
+.mona-light-yellow {
+    color: #FFEE89;
+}
+
+.mona-purple {
+    color:  #670BCF;
+}
+
+.mona-light-purple {
+    color: #D28CFD;
+}
+
 a {
-    color: #d3d5d9
+    color: #670BCF;
 }
 
 
 .breadcrumb {
-    background-color: #b2b8d9;
+    background-color: #D28CFD;
 }
 
 .breadcrumb-item.active {
-    color: #212529;
+    color: #670BCF;
+}
+
+
+.carousel-control-prev{
+    color: mona-yellow
 }
