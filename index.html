@@ -24,108 +24,106 @@
 
   <!-- Navigation -->
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top mona-purple-gradient"> <!-- test mona purple gradient..-->
     <div class="container">
+      <!--navbar gauche-->
       <a class="navbar-brand" href="index.html">
           <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
             <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
           </svg> MONA</a>
-    <!-- 
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
+      <!--navbar droite-->
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              À propos
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPortfolio">
-              <a class="dropdown-item" href="apropos.html">La Maison MONA</a>
-              <a class="dropdown-item" href="portfolio-2-col.html">Mission et valeurs</a>
-              <a class="dropdown-item" href="portfolio-3-col.html">L'équipe</a>
-            </div>
+          <li class="nav-item">
+            <a class="nav-link" href="#" id="navbarDropdownPortfolio">Accueil</a>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="./apropos.html">À propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.html">L'app</a>
+            <a class="nav-link" href="application.html">Application</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Les activités</a>
+            <a class="nav-link" href="activites.html">Activités</a>
           </li>
-          <li class="nav-item dropdown">
+          <!-- blog, en commentaire pour la v1-->
+          <!--<li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Blog
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
               <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-              <a class="dropdown-item" href="blog-home-2.html">Blog Home 2</a>
-              <a class="dropdown-item" href="blog-post.html">Blog Post</a>
             </div>
-          </li>
+          </li>-->
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPages" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Other Pages
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownPages">
-              <a class="dropdown-item" href="full-width.html">Full Width Page</a>
-              <a class="dropdown-item" href="sidebar.html">Sidebar Page</a>
-              <a class="dropdown-item" href="faq.html">FAQ</a>
-              <a class="dropdown-item" href="404.html">404</a>
-              <a class="dropdown-item" href="pricing.html">Pricing Table</a>
-            </div>
-          </li>
         </ul>
-      </div> -->
+      </div>
     </div>
   </nav>
 
+<!-- container: définit un max width pour ne pas avoir un site trop large sur de très grands écrans-->
+  <div class="container">
+  
+  <br>
+
+
+<!-- SECTION landing-->
 
   <header>
-    <img src="./img/carousel/1.png" class="img-fluid">
-<!--     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators" class="mona-purple">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner" role="listbox">-->
-        <!-- Slide One - Set the background image for this slide in the line below -->
-<!--        <div class="carousel-item active" style="background-image: url('./img/carousel/1.png')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="mona-purple">Téléchargez l'application</h3>
-          </div>
-        </div>-->
-        <!-- Slide Two - Set the background image for this slide in the line below -->
-<!--        <div class="carousel-item" style="background-image: url('./img/carousel/2.png')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="mona-purple">Organisez une activité</h3>
-          </div>
-        </div>-->
-        <!-- Slide Three - Set the background image for this slide in the line below -->
-<!--        <div class="carousel-item" style="background-image: url('./img/carousel/3.png')">
-          <div class="carousel-caption d-none d-md-block">
-            <h3 class="mona-purple">Pour en savoir plus</h3>
-          </div>
-        </div>
+<!-- Features Section -->
+    <div class="row">
+      <div class="col-lg-6">
+        <br>
+        <h2>Découvrez l'art qui vous entoure</h2>
+        <br>
+        <p>MONA, c'est à la fois:</p>
+        <ul>
+          <li>une application mobile (iOS et Android) gratuite et open-source</li>
+          <li>une chasse au trésor culturelle</li>
+          <li>une cartographie des œuvres d'art public et des lieux culturels au Québec</li>
+          <li>un projet engagé auprès des communautés</li>
+          <li>une étude universitaire sur les publics de l'art</li>
+          <li>un OSBL culturel</li>
+          <li>une initiative citoyenne autogérée</li>
+        </ul>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only mona-yellow">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      </a>
-    </div> -->
+      <div class="col-lg-6">
+<!--carousel 3 photos-->
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          <div class="carousel-inner" role="listbox">
+            <div class="carousel-item active" style="background-image: url('./img/carousel/1.jpg')"></div>
+            <div class="carousel-item" style="background-image: url('./img/carousel/2.png')"></div>
+            <div class="carousel-caption d-none d-md-block"></div>
+            <div class="carousel-item" style="background-image: url('./img/carousel/3.png')"></div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only mona-yellow">Précédent</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </a>
+        </div>
+        <!-- <img class="img-fluid rounded" src="./img/MONA-ad-2020.jpg" alt=""> -->
+      </div>
+    </div>
+
+    <hr>
   </header>
 
   <!-- Page Content -->
-  <div class="container">
-
-    <h1 class="my-4 mona-purple">Bienvenue!</h1>
+  
 
     <!-- Marketing Icons Section -->
     <div class="row">
@@ -145,7 +143,7 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Les activités</h4>
+          <h4 class="card-header">Propositions d'activités</h4>
           <div class="card-body">
             <p class="card-text">Partir en excursion artistique avec MONA</p>
           </div>
@@ -241,35 +239,13 @@
     </div> -->
     <!-- /.row -->
 
-    <!-- Features Section -->
-    <!-- <div class="row">
-      <div class="col-lg-6">
-        <h2>Modern Business Features</h2>
-        <p>The Modern Business template by Start Bootstrap includes:</p>
-        <ul>
-          <li>
-            <strong>Bootstrap v4</strong>
-          </li>
-          <li>jQuery</li>
-          <li>Font Awesome</li>
-          <li>Working contact form with validation</li>
-          <li>Unstyled page elements for easy customization</li>
-        </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
-      </div>
-      <div class="col-lg-6">
-        <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
-      </div>
-    </div> -->
-    <!-- /.row -->
-
-    <hr>
+    
 
     <!-- Call to Action Section -->
     <div class="row mb-4">
       <div class="col-md-8">
         <p><i>Ce site est en cours de construction</i>.</p>
-        <p>Pour toute question ou pour nous partager vos expériences, vous pouvez contacter l'équipe MONA par <a href="mailto:info@monamontreal.org">courriel</a> ou sur les réseaux sociaux, #monamtl.</p>
+        <p>Pour toute question ou pour nous partager vos expériences, vous pouvez contacter l'équipe MONA par <a href="mailto:info@monamontreal.org">courriel</a> ou sur les réseaux sociaux, @MONA.ArtPublic ou #monamtl.</p>
       </div>
       <div>
         <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/MONA.ArtPublic/"><i class="bi bi-facebook"></i></a>

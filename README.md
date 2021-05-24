@@ -8,7 +8,7 @@ site web pour présenter l'application MONA et l'OBNL la Maison MONA
 
 
 ## Crédits
-Création du site web: Sarah Dumaresq & Lena Krause
+Création du site web: Lena Krause
 Template Bootstrap: https://github.com/StartBootstrap/startbootstrap-modern-business
 
 
