@@ -36,12 +36,10 @@ a {
 
 
 .breadcrumb {
-    background-color: #D28CFD;
+    background-color: #FFEE89;
 }
 
-.breadcrumb-item.active {
-    color: #670BCF;
-}
+
 
 
 .carousel-control-prev{
