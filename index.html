@@ -13,6 +13,8 @@
   <!-- Bootstrap core CSS -->
   <link href="./vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sens">
+
   <!-- Custom styles for this template: Modern Business -->
   <link href="./css/modern-business.css" rel="stylesheet">
 
@@ -24,14 +26,11 @@
 
   <!-- Navbar du site -->
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top mona-purple-gradient"> <!-- test mona purple gradient..-->
+  <nav class="navbar fixed-top navbar-expand-lg fixed-top"> <!-- test mona purple gradient..-->
     <div class="container">
       <!--navbar gauche-->
       <a class="navbar-brand" href="index.html">
-          <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-house" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-            <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-          </svg> MONA</a>
+          <img src="./img/logo.png" height="40px"></a>
           <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -40,16 +39,16 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="./index.html">Accueil</a>
+            <a class="nav-link" href="./index.html">ACCUEIL</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="./apropos.html">À propos</a>
+            <a class="nav-link" href="./apropos.html">À PROPOS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="application.html">Application</a>
+            <a class="nav-link" href="application.html">APPLICATION</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="activites.html">Activités</a>
+            <a class="nav-link" href="activites.html">ACTIVITÉ</a>
           </li>
           <!-- blog, en commentaire pour la v1-->
           <!--<li class="nav-item dropdown">
@@ -61,7 +60,7 @@
             </div>
           </li>-->
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
           </li>
         </ul>
       </div>
@@ -71,17 +70,13 @@
 <!-- container: définit un max width pour ne pas avoir un site trop large sur de très grands écrans-->
   <div class="container">
   
-  <br>
-
-
 <!-- SECTION landing-->
 
   <header>
 <!-- Features Section -->
     <div class="row">
-      <div class="col-lg-6">
-        <br>
-        <h2>Découvrez l'art qui vous entoure</h2>
+      <div class="col-lg-5">
+        <h2>Découvrez l'art<br>qui vous entoure</h2>
         <br>
         <p>MONA, c'est à la fois:</p>
         <ul>
@@ -94,7 +89,7 @@
           <li>une initiative citoyenne autogérée</li>
         </ul>
       </div>
-      <div class="col-lg-6">
+      <div class="col-lg-7">
 <!--carousel 3 photos-->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -130,37 +125,42 @@
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">L'application mobile</h4>
+          <h4 class="card-header mona-xlight-purple">L'application mobile</h4>
           <div class="card-body">
             <p class="card-text">Télécharger l'app gratuite</p>
-              <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr"><img src="img/AppStore.png" width="150px"></a>
-              <a target="_blank" rel="noopener googlenoreferrer" href="https://play.google.com/store/apps/details?id=com.maison.mona"><img src="img/GooglePlay.png" width="150px"></a>
-            
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Comment ça marche?</a>
+            <div class="card-img">
+              <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr">
+                <img src="img/AppStore.png" class="img-small">
+              </a>
+              <br>
+              <a target="_blank" rel="noopener googlenoreferrer" href="https://play.google.com/store/apps/details?id=com.maison.mona"><img src="img/GooglePlay.png" class="img-small"></a>
+            </div>
+            <a href="#" class="btn mona-button">Comment ça marche?</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">Propositions d'activités</h4>
+          <h4 class="card-header mona-xlight-purple">Activités</h4>
           <div class="card-body">
             <p class="card-text">Partir en excursion artistique avec MONA</p>
+            <div class="card-img">
+              <img src="./img/MONA-screens.png" class="img-small" height="160px">
+            </div>
+            <a data-toggle="tooltip" title="Télécharger le pdf" href="./files/MONA_Presentation.pdf" class="btn mona-button" download="">En savoir plus</a> 
           </div>
-          <div class="card-footer">
-            <a data-toggle="tooltip" title="Télécharger le pdf" href="./files/MONA_Presentation.pdf" class="btn btn-primary" download="">En savoir plus</a>
-          </div>
+          
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header">La Maison MONA</h4>
+          <h4 class="card-header mona-xlight-purple">La Maison MONA</h4>
           <div class="card-body">
             <p class="card-text">Notre organisme sans but lucratif</p>
-          </div>
-          <div class="card-footer">
-            <a data-toggle="tooltip" title="Télécharger le pdf" href="./files/MONA_Presentation.pdf" class="btn btn-primary" download="">À propos</a>
+            <div class="card-img">
+              <img src="./img/MONA-logo-splash.gif" class="center-cropped">
+            </div>
+            <a data-toggle="tooltip" title="Télécharger le pdf" href="./files/MONA_Presentation.pdf" class="btn mona-button" download="">À propos</a>
           </div>
         </div>
       </div>
@@ -240,12 +240,11 @@
     </div> -->
     <!-- /.row -->
 
-    
+    <hr>
 
     <!-- Call to Action Section -->
     <div class="row mb-4">
       <div class="col-md-8">
-        <p><i>Ce site est en cours de construction</i>.</p>
         <p>Pour toute question ou pour nous partager vos expériences, vous pouvez contacter l'équipe MONA par <a href="mailto:info@monamontreal.org">courriel</a> ou sur les réseaux sociaux, @MONA.ArtPublic ou #monamtl.</p>
       </div>
       <div>
@@ -253,6 +252,8 @@
         <a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/MONA.ArtPublic/"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
+
+    <p><i>Ce site est en cours de construction</i>.</p>
 
   </div>
   <!-- /.container -->
