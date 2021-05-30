@@ -26,7 +26,7 @@
 
   <!-- Navbar du site -->
 
-  <nav class="navbar fixed-top navbar-expand-lg fixed-top"> <!-- test mona purple gradient..-->
+  <nav class="navbar fixed-top navbar-expand-lg fixed-top">
     <div class="container">
       <!--navbar gauche-->
       <a class="navbar-brand" href="index.html">
@@ -47,11 +47,11 @@
           <li class="nav-item">
             <a class="nav-link" href="application.html">APPLICATION</a>
           </li>
+          <!-- en commentaire pour la v1
           <li class="nav-item">
-            <a class="nav-link" href="activites.html">ACTIVITÉ</a>
+            <a class="nav-link" href="activites.html">ACTIVITÉS</a>
           </li>
-          <!-- blog, en commentaire pour la v1-->
-          <!--<li class="nav-item dropdown">
+          <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Blog
             </a>
@@ -66,6 +66,7 @@
       </div>
     </div>
   </nav>
+   
 
 <!-- container: définit un max width pour ne pas avoir un site trop large sur de très grands écrans-->
   <div class="container">
@@ -77,7 +78,6 @@
     <div class="row">
       <div class="col-lg-5">
         <h2>Découvrez l'art<br>qui vous entoure</h2>
-        <br>
         <p>MONA, c'est à la fois:</p>
         <ul>
           <li>une application mobile (iOS et Android) gratuite et open-source</li>
@@ -89,7 +89,7 @@
           <li>une initiative citoyenne autogérée</li>
         </ul>
       </div>
-      <div class="col-lg-7">
+      <div class="col-lg-7 imgStyle">
 <!--carousel 3 photos-->
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
           <ol class="carousel-indicators">
@@ -125,23 +125,23 @@
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header mona-xlight-purple">L'application mobile</h4>
+          <p class="card-header mona-xlight-purple">L'application mobile</p>
           <div class="card-body">
             <p class="card-text">Télécharger l'app gratuite</p>
             <div class="card-img">
               <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr">
-                <img src="img/AppStore.png" class="img-small">
+                <img src="img/AppStore.png" class="img-small" width ="180px">
               </a>
               <br>
-              <a target="_blank" rel="noopener googlenoreferrer" href="https://play.google.com/store/apps/details?id=com.maison.mona"><img src="img/GooglePlay.png" class="img-small"></a>
+              <a target="_blank" rel="noopener googlenoreferrer" href="https://play.google.com/store/apps/details?id=com.maison.mona"><img src="img/GooglePlay.png" class="img-small" width ="180px"></a>
             </div>
-            <a href="#" class="btn mona-button">Comment ça marche?</a>
+            <a href="./application.html" class="btn mona-button">Comment ça marche?</a>
           </div>
         </div>
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header mona-xlight-purple">Activités</h4>
+          <p class="card-header mona-xlight-purple">Activités</p>
           <div class="card-body">
             <p class="card-text">Partir en excursion artistique avec MONA</p>
             <div class="card-img">
@@ -154,7 +154,7 @@
       </div>
       <div class="col-lg-4 mb-4">
         <div class="card h-100">
-          <h4 class="card-header mona-xlight-purple">La Maison MONA</h4>
+          <p class="card-header mona-xlight-purple">La Maison MONA</p>
           <div class="card-body">
             <p class="card-text">Notre organisme sans but lucratif</p>
             <div class="card-img">

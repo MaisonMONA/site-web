@@ -4,8 +4,15 @@ body{
 
 h1, h2, h3, h4 {
     font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 30px;
 }
 
+h5, h6 {
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
 
 .mona-yellow {
     background-color: #FBE900;
@@ -35,7 +42,9 @@ h1, h2, h3, h4 {
 
 .mona-button{
     background-color: #e2e4f3;
-    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .mona-button:hover{
@@ -75,6 +84,8 @@ header {
 
 .card-header{
     text-align: center;
+    font-weight: 600;
+    font-size: larger;
 }
 
 
@@ -100,4 +111,46 @@ header {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#appInfo{
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.appNav{
+    height: 50px;
+}
+
+.appMockup{
+    height: 25rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+.imgStyle{
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.textStyle{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#descript{
+    padding: 10px;
+    border: solid;
+    border-color: #C0C4E4
+}
+
+.inTextIcon {
+    padding-left: 5px;
+    padding-right: 3px;
 }
