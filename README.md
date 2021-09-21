@@ -6,6 +6,10 @@ date de dernière mise à jour: juin 2021.
 
 ## Contenu du site
 - page d'accueil: index.html
+- à propos
+- application
+- activités
+- contact
 
 
 
