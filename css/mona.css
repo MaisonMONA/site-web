@@ -165,3 +165,8 @@ header {
     margin-left: auto;
     margin-right: auto;
 }
+
+figcaption {
+    color: #262829;
+    text-align: right;
+}
