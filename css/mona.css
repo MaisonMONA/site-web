@@ -170,3 +170,27 @@ figcaption {
     color: #262829;
     text-align: right;
 }
+
+.textgauche {
+    text-align: left;
+}
+
+blockquote {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    max-width: 600;
+    align-self: center;
+}
+
+.imgCenter{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ref{
+    margin-left: 50px;
+    color: #262829;
+}
