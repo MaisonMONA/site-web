@@ -44,14 +44,14 @@ h5, h6 {
 }
 
 
-.mona-button{
+.mona-button {
     background-color: #e2e4f3;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.mona-button:hover{
+.mona-button:hover {
     background-color: #670BCF;
     color: #e6e6e6;
 }
@@ -86,7 +86,7 @@ header {
     border-color: #e2e4f3;
 }
 
-.card-header{
+.card-header {
     text-align: center;
     font-weight: 600;
     font-size: larger;
@@ -102,7 +102,7 @@ header {
     overflow: hidden;
 }
 
-.card-img{
+.card-img {
     height: 150px;
     width: 80%;
     margin-top: 20px;
@@ -111,25 +111,25 @@ header {
     margin-right: 10%;
 }
 
-.img-small{
+.img-small {
     max-width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-#appInfo{
+#appInfo {
     width: 80%;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-.appNav{
+.appNav {
     height: 50px;
 }
 
-.appMockup{
+.appMockup {
     height: 25rem;
     display: block;
     margin-left: auto;
@@ -137,19 +137,19 @@ header {
     padding: 10px;
 }
 
-.imgStyle{
+.imgStyle {
     display: block;
     margin-top: auto;
     margin-bottom: auto;
 }
 
-.textStyle{
+.textStyle {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
-#descript{
+#descript {
     padding: 10px;
     border: solid;
     border-color: #C0C4E4
@@ -175,22 +175,17 @@ figcaption {
     text-align: left;
 }
 
+/*pourquoi il ne fonctionne pas? 2021-10-08.html, ligne 100 -->*/
 blockquote {
     margin-left: 50px;
     margin-right: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
-    max-width: 600;
+    max-width: 600px;
     align-self: center;
 }
 
-.imgCenter{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.ref{
+.ref {
     margin-left: 50px;
     color: #262829;
 }
