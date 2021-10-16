@@ -1,21 +1,38 @@
 /*
 Test de cartographie des données MONA
+LMK, Maison MONA, projet patrimoine
 */
+
 var margin = {top: 20, right: 30, bottom: 30, left: 80},
-  width = 1250 - margin.left - margin.right,
-  height = 700 - margin.top - margin.bottom;
+width = 1250 - margin.left - margin.right,
+height = 700 - margin.top - margin.bottom;
 
 const svgCarte = d3.select("#carte")
-  .attr("width", width + margin.left + margin.right)
-  .attr("height", height + margin.top + margin.bottom);
-
+.attr("width", width + margin.left + margin.right)
+.attr("height", height + margin.top + margin.bottom);
 const container = svgCarte.append('g')
 
+//geo
 var proj = d3.geoConicConformal();
 const path = d3.geoPath();
 
+//couleurs des points
 const color = d3.scaleOrdinal(["art", "lieu", "pat", "autre"], ["#FBE900", "#B4B7DD", "#E97FC8", "#010202"]) 
 
+//zone d'information associée à la souris
+const tooltip = d3.select("body").append("div")
+.attr("class", "tooltip")
+.style("position", "absolute")
+.style("visibility", "hidden")
+
+
+function showToolTip (text, coords){
+    d3.select(".tooltip")
+      .text(text)
+      .style("top", coords[1] + "px")
+      .style("left", coords[0] + "px")
+      .style("visibility", "visible");
+}
 
 
 function map (geojson, dataM){
@@ -37,21 +54,30 @@ function map (geojson, dataM){
         .attr('fill', 'none')      
         
 
+    console.log("categorie 1: " + (dataM[0].category.fr));
+    console.log("categorie 2: " + (dataM[1].category.fr));
 
-    var circles = container.selectAll("circle").data(dataM)
 
-    console.log("lat: " + (dataM[0].location.lat))
-    console.log("proj: " + proj([dataM[0].location.lat, dataM[0].location.lng]))
+    var circles = container.selectAll("circle");
 
-    circles.enter()
+    circles
+        .data(dataM)
+        .enter()
         .append("circle")
         .attr('class', 'city-circle')
         .attr("cx", d => proj([d.location.lng, d.location.lat])[0])
         .attr("cy", d => proj([d.location.lng, d.location.lat])[1])
         .attr("id", d => d.id)
-        .attr("r", "2px")
+        .attr("r", "3px")
         .attr("fill", d => color(d.type))
-        .attr("opacity", 1)   
+        .attr("opacity", 1)
+        .on("mouseover", function(d) {
+            //Quand on passe la souris sur un point, affiche le nom du pays et les occurrences dans tooltip
+            console.log(d)
+            let text = d.title;
+            d.category.fr ? text = text + "\nCatégorie: " + d.category.fr : console.log("pas de catégorie")
+            showToolTip(text, proj([d.location.lng, d.location.lat]))
+          })   
 
 //zoom sur l'image
     svgCarte.call(
@@ -81,7 +107,9 @@ Promise.all([
 //créer un dataset avec toutes les données à cartographier
     var dataMONA = [];
 
-  
+    console.log(lieu.data[0])
+    console.log(art.data[0])
+    lieu.data.shift();
     lieu.data.forEach(l => {
         l.type="lieu"
         dataMONA.push(l)
