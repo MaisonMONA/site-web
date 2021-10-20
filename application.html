@@ -1,61 +1,71 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="site web MONA: application" />
+    <meta name="author" content="Maison MONA" />
 
-<head>
+    <title>MONA | Application</title>
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="site web MONA: application">
-  <meta name="author" content="Maison MONA">
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-  <title>MONA | Application</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+    />
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="css/modern-business.css" rel="stylesheet" />
 
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <!-- notre fichier CSS:  MONA -->
+    <link href="css/mona.css" rel="stylesheet" />
+  </head>
 
-  <!-- Custom styles for this template -->
-  <link href="css/modern-business.css" rel="stylesheet">
+  <body>
+    <!-- Navbar du site -->
 
-  <!-- notre fichier CSS:  MONA -->
-  <link href="css/mona.css" rel="stylesheet">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <!--navbar gauche-->
+        <a class="navbar-brand" href="index.html">
+          <img src="./img/logo.png" height="40px"
+        /></a>
+        <button
+          class="navbar-toggler navbar-toggler-right"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-</head>
-
-<body>
-
-
-  <!-- Navbar du site -->
-
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <!--navbar gauche-->
-      <a class="navbar-brand" href="index.html">
-          <img src="./img/logo.png" height="40px"></a>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!--navbar droite-->
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="./index.html">ACCUEIL</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./apropos.html">À PROPOS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./application.html">APPLICATION</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./activites.html">ACTIVITÉS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./blogue.html">BLOGUE</a>
-          </li>
-          <!-- en commentaire pour la v1
+        <!--navbar droite-->
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="./index.html">ACCUEIL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./apropos.html">À PROPOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./application.html">APPLICATION</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./activites.html">ACTIVITÉS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./blogue.html">BLOGUE</a>
+            </li>
+            <!-- en commentaire pour la v1
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Blog
@@ -64,126 +74,283 @@
               <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
             </div>
           </li>-->
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">CONTACT</a>
-          </li>
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">CONTACT</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-
+    </nav>
 
     <div class="container">
+      <!--bannière info base-->
+      <header class="textStyle" style="max-width: 680px">
+        <h4 id="descript">
+          MONA est une application mobile gratuite qui invite à la découverte de
+          l'art et des lieux culturels au Québec.
+        </h4>
+      </header>
 
-    <!--bannière info base-->
-        <header class="textStyle" style="max-width: 680px;">
-            <h4  id="descript">MONA est une application mobile gratuite qui invite à la découverte de l'art et des lieux culturels au Québec.</h4> 
-        </header>
-
-    <!--texte intro / descrption-->        
-        <div class="row">
-
-            <div class="col-md-8">
-                <img class="img-fluid rounded mb-4" src="./img/MONA_PrisePhoto.png">
+      <div class="row justify-content-md-center align-items-center">
+        <div class="col col-lg-6 imgStyle">
+          <div
+            id="carouselTutoriel"
+            class="carousel slide"
+            data-ride="carousel"
+            data-interval="false"
+          >
+            <ol class="carousel-indicators">
+              <li
+                data-target="#carouselTutoriel"
+                data-slide-to="0"
+                class="active"
+              ></li>
+              <li data-target="#carouselTutoriel" data-slide-to="1"></li>
+              <li data-target="#carouselTutoriel" data-slide-to="2"></li>
+              <li data-target="#carouselTutoriel" data-slide-to="3"></li>
+              <li data-target="#carouselTutoriel" data-slide-to="4"></li>
+              <li data-target="#carouselTutoriel" data-slide-to="5"></li>
+              <li data-target="#carouselTutoriel" data-slide-to="6"></li>
+              <li data-target="#carouselTutoriel" data-slide-to="7"></li>
+              <li data-target="#carouselTutoriel" data-slide-to="8"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+              <div
+                class="carousel-item active"
+                style="background-image: url('./img/carouselTutoriel/1.jpg')"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-image: url('./img/carouselTutoriel/2.jpg')"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-image: url('./img/carouselTutoriel/3.jpg')"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-image: url('./img/carouselTutoriel/4.jpg')"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-image: url('./img/carouselTutoriel/5.jpg')"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-image: url('./img/carouselTutoriel/6.jpg')"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-image: url('./img/carouselTutoriel/7.jpg')"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-image: url('./img/carouselTutoriel/8.jpg')"
+              ></div>
+              <div
+                class="carousel-item"
+                style="background-image: url('./img/carouselTutoriel/9.jpg')"
+              ></div>
             </div>
-
-            <div class="col-md-4" id="appInfo">
-                <h5> La ville devient votre terrain de jeu</h5>
-
-                <p>Recherchez des œuvres d'art et prenez-les en photo pour les ajouter à votre collection personnelle. Évaluez votre expérience en ajoutant vos propres notes et commentaires. En vous promenant à travers les quartiers de votre ville, relevez les défis proposés et accumulez les reconnaissances.</p>
-
-                <div class="card-img">
-                    <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr">
-                      <img src="img/AppStore.png" class="img-small" width ="150px">
-                    </a>
-                    <br>
-                    <a target="_blank" rel="noopener googlenoreferrer" href="https://play.google.com/store/apps/details?id=com.maison.mona"><img src="img/GooglePlay.png" class="img-small" width ="150px"></a>
-                  </div>
-
-            </div>
+            <a
+              class="carousel-control-prev"
+              href="#carouselTutoriel"
+              role="button"
+              data-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only mona-yellow">Précédent</span>
+            </a>
+            <a
+              class="carousel-control-next"
+              href="#carouselTutoriel"
+              role="button"
+              data-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+            </a>
+          </div>
         </div>
 
+        <div class="col col-lg-6" id="appInfo">
+          <h5>La ville devient votre terrain de jeu</h5>
 
-    <!--présentation onglets app-->
-        <div class="row app">
-            <div class="col-sm-8 order-sm-12">
-                <h3><img src="img/Application/nav/carte.png" class="appNav"> La carte</h3>
+          <p>
+            Recherchez des œuvres d'art et prenez-les en photo pour les ajouter
+            à votre collection personnelle. Évaluez votre expérience en ajoutant
+            vos propres notes et commentaires. En vous promenant à travers les
+            quartiers de votre ville, relevez les défis proposés et accumulez
+            les reconnaissances.
+          </p>
 
-                <p>La carte vous invite découvrir les œuvres d'art et les lieux culturels qui vous entourent. Les marqueurs jaunes représentent les oeuvres d'art et ceux violets les lieux culturels. L'indicateur <img src="img/Application/icones/cible.svg" height="18px" class="inTextIcon"> vous permet de visualiser toutes vos cibles. Les éléments de votre collections sont signalés par une étoile.</p>
-
-                <p>En autorisant l'application à accéder à votre géolicalisation, vous pourrez vous situer en temps réel<img src="img/Application/icones/localisation-user.svg" height="18px" class="inTextIcon">. Afin de préparer une excursion artistique, vous pouvez placer l'indicateur<img src="img/Application/icones/pin-user.svg" height="20px" class="inTextIcon">. Cela vous permettra notamment de trier les œuvres par distance dans la liste à partir de cet emplacement.</p>
-
-                <p>En cliquant (clic-long sur Android) sur un marqueur, vous affichez la fiche de l'œuvre concernée. Utilisez les options de tris pour afficher les marqueurs qui vous intéressent.</p>
-            </div>
-            <div class="col-sm-4 order-sm-1">
-                <img src="img/Application/mockups/MONA_mockups_carte.png" class="appMockup">
-            </div>
+          <div class="store-icons">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr"
+            >
+              <img src="img/AppStore.png" class="img-small" width="150px" />
+            </a>
+            <a
+              target="_blank"
+              rel="noopener googlenoreferrer"
+              href="https://play.google.com/store/apps/details?id=com.maison.mona"
+              ><img src="img/GooglePlay.png" class="img-small" width="150px"
+            /></a>
+          </div>
         </div>
-        <hr>
-        <div class="row app">
-            <div class="col-sm-8">
+      </div>
 
-                <h3><img src="img/Application/nav/odj.png" class="appNav"> L'œuvre du jour</h3>
+      <hr class="big-vertical-margin">
 
-                <p>L'œuvre du jour vous propose une découverte quotidienne. Vous pouvez cibler l'oeuvre, regarder son emplacement sur la carte, ou tout simplement vous mettre en route pour aller la photographier!</p>
-            </div>    
-            <div class="col-sm-4">
-                <img src="img/Application/mockups/MONA_mockups_odj.png" class="appMockup">
-            </div>
+      <!--présentation onglets app-->
+      <div class="row app">
+        <div class="col-sm-8 order-sm-12">
+          <h3>
+            <img src="img/Application/nav/carte.png" class="appNav" /> La carte
+          </h3>
+
+          <p>
+            La carte vous invite découvrir les œuvres d'art et les lieux
+            culturels qui vous entourent. Les marqueurs jaunes représentent les
+            oeuvres d'art et ceux violets les lieux culturels. L'indicateur
+            <img
+              src="img/Application/icones/cible.svg"
+              height="18px"
+              class="inTextIcon"
+            />
+            vous permet de visualiser toutes vos cibles. Les éléments de votre
+            collections sont signalés par une étoile.
+          </p>
+
+          <p>
+            Utilisez les options de tris pour
+            afficher les marqueurs qui vous intéressent.
+            En cliquant sur un marqueur, vous affichez
+            la fiche de l'œuvre concernée. 
+          </p>
+
+          <p>
+            En autorisant l'application à accéder à votre géolicalisation, vous
+            pourrez vous situer en temps réel<img
+              src="img/Application/icones/localisation-user.svg"
+              height="18px"
+              class="inTextIcon"
+            />.
+          </p>
+
         </div>
-
-        <div class="row app">
-            <div class="col-md-8 order-sm-12">
-                <h3><img src="img/Application/nav/oeuvre.png" class="appNav"> La liste</h3>
-
-                <p>La liste présente toutes les oeuvres présentes sur l'application. Accédez à leur détail, rangez-les par distance ou affichez-les selon différentes options de tri.</p>
-            </div>
-            <div class="col-md-4 order-sm-1">
-                <img src="img/Application/mockups/MONA_mockups_liste.png" class="appMockup">
-            </div>
+        <div class="col-sm-4 order-sm-1">
+          <img
+            src="img/Application/mockups/MONA_mockups_carte.png"
+            class="appMockup"
+          />
         </div>
+      </div>
+      <hr class="big-vertical-margin">
+      <div class="row app">
+        <div class="col-sm-8">
+          <h3>
+            <img src="img/Application/nav/odj.png" class="appNav" /> L'œuvre du
+            jour
+          </h3>
 
-        <div class="row app">
-            <div class="col-md-8">
-
-                <h3><img src="img/Application/nav/collection.png" class="appNav"> La collection</h3>
-
-                <p>La collection regroupe toutes vos découvertes. Vous y retrouverez vos photographies, notes et commentaires.</p>
-
-                <p>Cette page vous permet également d'accéder aux badges récompensant vos efforts de collectionneur·se MONA.</p>
-            </div>
-            <div class="col-md-4">
-                <img src="img/Application/mockups/MONA_mockups_collection.png" class="appMockup">
-            </div>
+          <p>
+            L'œuvre du jour vous propose une découverte quotidienne. Vous pouvez
+            cibler l'oeuvre, regarder son emplacement sur la carte, ou tout
+            simplement vous mettre en route pour aller la photographier!
+          </p>
         </div>
-
-        <div class="row app">
-            <div class="col-md-8 order-sm-12">
-
-            <h3><img src="img/Application/nav/autre.png" class="appNav"> Paramètres</h3>
-
-            <p>Utilisez cet onglet pour passer en mode hors-ligne (sans utilisation des données mobiles). Vous y retrouverez également diverses informations à propos de l'application et de son fonctionnement.</p>
-            </div>
-            <div class="col-md-4 order-sm-1">
-                <img src="img/Application/mockups/MONA_mockups_autre.png" class="appMockup">
-            </div>
-        
+        <div class="col-sm-4">
+          <img
+            src="img/Application/mockups/MONA_mockups_odj.png"
+            class="appMockup"
+          />
         </div>
+      </div>
+      <hr class="big-vertical-margin">
+      <div class="row app">
+        <div class="col-md-8 order-sm-12">
+          <h3>
+            <img src="img/Application/nav/oeuvre.png" class="appNav" /> La liste d'œuvres
+          </h3>
+
+          <p>
+            La liste présente toutes les oeuvres présentes sur l'application.
+            Accédez à leur détail, rangez-les par distance ou affichez-les selon
+            différentes options de tri.
+          </p>
+        </div>
+        <div class="col-md-4 order-sm-1">
+          <img
+            src="img/Application/mockups/MONA_mockups_liste.png"
+            class="appMockup"
+          />
+        </div>
+      </div>
+      <hr class="big-vertical-margin">
+      <div class="row app">
+        <div class="col-md-8">
+          <h3>
+            <img src="img/Application/nav/collection.png" class="appNav" /> La
+            collection
+          </h3>
+
+          <p>
+            La collection regroupe toutes vos découvertes. Vous y retrouverez
+            vos photographies, notes et commentaires.
+          </p>
+
+          <p>
+            Cette page vous permet également d'accéder aux badges récompensant
+            vos efforts de collectionneur·se MONA.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <img
+            src="img/Application/mockups/MONA_mockups_collection.png"
+            class="appMockup"
+          />
+        </div>
+      </div>
+      <hr class="big-vertical-margin">
+      <div class="row app">
+        <div class="col-md-8 order-sm-12">
+          <h3>
+            <img src="img/Application/nav/autre.png" class="appNav" />
+            Autres
+          </h3>
+
+          <p>
+            Vous y retrouverez diverses
+            informations à propos de l'application et de son fonctionnement.
+          </p>
+        </div>
+        <div class="col-md-4 order-sm-1">
+          <img
+            src="img/Application/mockups/MONA_mockups_autre.png"
+            class="appMockup"
+          />
+        </div>
+      </div>
     </div>
 
-
-<!-- Footer -->
+    <!-- Footer -->
     <footer class="py-5 bg-dark">
-        <div class="container">
+      <div class="container">
         <p class="m-0 text-center text-white">Maison MONA - 2021</p>
-        </div>
-        <!-- /.container -->
+      </div>
+      <!-- /.container -->
     </footer>
 
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
-
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
