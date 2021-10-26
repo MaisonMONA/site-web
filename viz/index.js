@@ -68,7 +68,7 @@ function map (geojson, dataM){
         .attr("cx", d => proj([d.location.lng, d.location.lat])[0])
         .attr("cy", d => proj([d.location.lng, d.location.lat])[1])
         .attr("id", d => d.id)
-        .attr("r", "2px")
+        .attr("r", "3px")
         .attr("fill", d => color(d.typeMONA))
         .attr("opacity", 1)
         .on("mouseover", function(d) {
@@ -112,16 +112,21 @@ Promise.all([
     console.log(art.data[0])
     console.log(pat.features[0])
     lieu.data.shift();
-    lieu.data.forEach(l => {
-        l.typeMONA = "lieu"
-        dataMONA.push(l)
-    });  
+
     art.data.forEach(a => {
         a.typeMONA = "art"
         dataMONA.push(a)
     });
+
+    lieu.data.forEach(l => {
+        l.typeMONA = "lieu"
+        dataMONA.push(l)
+    });  
+    
     const startid = dataMONA.length
     var i = 1;
+
+    //normalisation des données externes
     pat.features.forEach(p => {
         p.id = startid + i;
         p.title = p.properties.Nom;

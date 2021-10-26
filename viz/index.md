@@ -10,8 +10,13 @@
 
 ## TODO 
 - ajouter les autres données patrimoine: 
-    - [Immeubles patrimoniaux cités par les municipalités](https://www.donneesquebec.ca/recherche/fr/dataset/immeubles-patrimoniaux-cites-par-les-municipalites-et-les-communautes-autochtones)
-    - [Immeubles patrimoniaux classés par le ministre de la Culture et des Communications](https://www.donneesquebec.ca/recherche/fr/dataset/immeubles-patrimoniaux-classes-par-la-ministre-de-la-culture-et-des-communications)
+    -[] [Immeubles patrimoniaux cités par les municipalités](https://www.donneesquebec.ca/recherche/fr/dataset/immeubles-patrimoniaux-cites-par-les-municipalites-et-les-communautes-autochtones)
+    -[] [Immeubles patrimoniaux classés par le ministre de la Culture et des Communications](https://www.donneesquebec.ca/recherche/fr/dataset/immeubles-patrimoniaux-classes-par-la-ministre-de-la-culture-et-des-communications)
     - [Sites patrimoniaux cités par les municipalités](https://www.donneesquebec.ca/recherche/fr/dataset/sites-patrimoniaux-cites-par-les-municipalites-et-les-communautes-autochtones)
     - [Site patrimonial national déclaré par la Loi sur le patrimoine culturel par le gouvernement du Québec](https://www.donneesquebec.ca/recherche/fr/dataset/site-patrimonial-national-declare-par-la-loi-sur-le-patrimoine-culturel-par-le-gouvernement-du-)
     - [Sites patrimoniaux classés par le ministre de la Culture et des Communications](https://www.donneesquebec.ca/recherche/fr/dataset/sites-patrimoniaux-classes-par-la-ministre-de-la-culture-et-des-communications)
+
+- boutons pour afficher/cacher les sources de données
+- afficher détails avec un clic
+- changer la taille des points avec un sélecteur ou gérer taille/z position (lieu culturel plus grand mais derrière art public ou vice-versa)
+- gérer affichage québec? (2 cartes?)
