@@ -17,7 +17,7 @@ var proj = d3.geoConicConformal();
 const path = d3.geoPath();
 
 //couleurs des points
-const color = d3.scaleOrdinal(["art", "lieu", "pat", "autre"], ["#FBE900", "#B4B7DD", "#E97FC8", "#010202"]) 
+const color = d3.scaleOrdinal(["art", "lieu", "patrimoine", "autre"], ["#FBE900", "#B4B7DD", "#E97FC8", "#010202"]) 
 
 //zone d'information associée à la souris
 const tooltip = d3.select("body").append("div")
@@ -68,8 +68,8 @@ function map (geojson, dataM){
         .attr("cx", d => proj([d.location.lng, d.location.lat])[0])
         .attr("cy", d => proj([d.location.lng, d.location.lat])[1])
         .attr("id", d => d.id)
-        .attr("r", "3px")
-        .attr("fill", d => color(d.type))
+        .attr("r", "2px")
+        .attr("fill", d => color(d.typeMONA))
         .attr("opacity", 1)
         .on("mouseover", function(d) {
             //Quand on passe la souris sur un point, affiche le nom du pays et les occurrences dans tooltip
@@ -100,8 +100,9 @@ Promise.all([
     //d3.json('https://data.montreal.ca/dataset/41fcc790-e328-44be-bcbf-73556fa0bc32/resource/b0a6cfa4-ad77-4f5b-bd1b-050fe233a31f/download/patrimoinelpc.geojson'),
     d3.json('https://data.montreal.ca/dataset/00bd85eb-23aa-4669-8f1b-ba9a000e3dd8/resource/e9b0f927-8f75-458c-8fda-b5da65cc8b73/download/limadmin.geojson'),
     d3.json('../data/artworks.json'),
-    d3.json('../data/places.json')
-  ]).then(([geomtl, art, lieu]) => {
+    d3.json('../data/places.json'),
+    d3.json('../data/patrimoine-centroid.geojson')
+  ]).then(([geomtl, art, lieu, pat]) => {
 
 
 //créer un dataset avec toutes les données à cartographier
@@ -109,15 +110,34 @@ Promise.all([
 
     console.log(lieu.data[0])
     console.log(art.data[0])
+    console.log(pat.features[0])
     lieu.data.shift();
     lieu.data.forEach(l => {
-        l.type="lieu"
+        l.typeMONA = "lieu"
         dataMONA.push(l)
     });  
     art.data.forEach(a => {
-        a.type="art"
+        a.typeMONA = "art"
         dataMONA.push(a)
     });
+    const startid = dataMONA.length
+    var i = 1;
+    pat.features.forEach(p => {
+        p.id = startid + i;
+        p.title = p.properties.Nom;
+        p.location = {
+            lat: p.geometry.coordinates[1],
+            lng: p.geometry.coordinates[0]
+        }
+        p.category = {
+            fr: "patrimoine - ville de Montréal",
+            en: "Montreal city heritage"
+        };    
+        p.typeMONA = "patrimoine";
+
+        dataMONA.push(p)
+        i++;
+    })
     console.log(dataMONA)
 
     map(geomtl, dataMONA);
