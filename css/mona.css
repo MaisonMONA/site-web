@@ -163,6 +163,7 @@ header {
 figcaption {
     color: #262829;
     text-align: right;
+    font-size: small;
 }
 
 .textgauche {
