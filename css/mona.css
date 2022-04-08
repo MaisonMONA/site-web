@@ -166,6 +166,12 @@ figcaption {
     font-size: small;
 }
 
+.longfigcaption  {
+    color: #262829;
+    font-size: small;
+    max-width: 650px;
+}
+
 .textgauche {
     text-align: left;
 }
