@@ -233,3 +233,12 @@ blockquote {
     margin: 10px auto 20px;
     display: block;
 }
+.links-grid{
+    display: grid;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-template-columns: auto auto auto auto;
+    text-align: center;
+    color: rgb(75, 74, 74);
+}
