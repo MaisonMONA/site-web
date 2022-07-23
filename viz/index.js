@@ -4,8 +4,8 @@ LMK, Maison MONA, projet patrimoine
 */
 
 var margin = {top: 20, right: 30, bottom: 30, left: 80},
-width = 1250 - margin.left - margin.right,
-height = 700 - margin.top - margin.bottom;
+width = 1500 - margin.left - margin.right,
+height = 900 - margin.top - margin.bottom;
 
 const svgCarte = d3.select("#carte")
 .attr("width", width + margin.left + margin.right)
@@ -34,6 +34,49 @@ function showToolTip (text, coords){
       .style("visibility", "visible");
 }
 
+function showDetails (d){
+    console.log(d.typeMONA)
+    var title;
+    var contenu;
+  
+    if (d.typeMONA == "art"){
+        title = d.title.fr;
+        var artistes = "Nom artiste"
+        //d.artists.forEach(a => artistes = artistes.concat(a.name).concat(" "));
+        var cat =""
+        d.categories.fr.forEach(c => cat = cat + c + " ")
+       
+        contenu = `
+                <p>${artistes} (${d.produced_at.substr(0,10)})
+                <p>${cat}</p>
+                <a href="${d.url.fr? d.url.fr : ""}" target="_blank">web</a>
+                `
+    }
+    else if (d.typeMONA == "lieu"){
+
+        title = d.title;
+        contenu = `
+                  <p>${d.category.fr}</p>
+                  <p>${d.description}</p>`
+  
+    }
+    else if (d.typeMONA == "patrimoine"){
+        
+        title = d.title;
+        contenu = ` <p>${d.functions.fr}</p>
+                    <p>${d['sous-usages']}</p>
+                    <p>${d.territory}</p>
+                    <a href="${d.url? d.url : ""}" target="_blank">rpcq</a>
+                  <p>${d.description}</p>
+                  <p>${d.synthesis}</p>`
+    }
+  
+  
+    d3.select("#info").html(`
+      <h3 style="background-color: ${color(d.typeMONA)}">${title}</h3>
+      <code>${contenu}</code>
+    `)
+  }
 
 function map (geojson, geobase, dataM){
 
@@ -82,10 +125,29 @@ function map (geojson, geobase, dataM){
         .on("mouseover", function(d) {
             //Quand on passe la souris sur un point, affiche le nom du pays et les occurrences dans tooltip
             console.log(d)
-            let text = d.title;
-            d.category.fr ? text = text + "\nCatégorie: " + d.category.fr : console.log("pas de catégorie")
+            let text;
+            switch (d.typeMONA){
+
+                case "art":
+                    text = String(d.title.fr).concat(" | ")
+                    d.categories.fr.forEach(cat => text = text + " " + cat)
+                    break;
+                
+                case "lieu":
+                    text = String(d.title)
+                    text = text + " " + d.category.fr
+                    break;
+
+                case "patrimoine":
+                    text = String(d.title)
+                    d.functions.fr.forEach(cat => text = text + " " + cat)
+                    break;
+
+            }
+
             showToolTip(text, proj([d.location.lng, d.location.lat]))
-          })   
+          }) 
+        .on("click", d => showDetails(d))   
 
 //zoom sur l'image
     svgCarte.call(
