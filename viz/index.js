@@ -17,7 +17,7 @@ var proj = d3.geoConicConformal();
 const path = d3.geoPath();
 
 //couleurs des points
-const color = d3.scaleOrdinal(["art", "lieu", "patrimoine", "autre"], ["#FBE900", "#B4B7DD", "#E97FC8", "#010202"]) 
+const color = d3.scaleOrdinal(["art", "lieu", "patrimoine", "autre"], ["#FAE800", "#C1C4E4", "#FE7E61", "#010202"]) 
 
 //zone d'information associée à la souris
 const tooltip = d3.select("body").append("div")
@@ -35,7 +35,7 @@ function showToolTip (text, coords){
 }
 
 
-function map (geojson, dataM){
+function map (geojson, geobase, dataM){
 
     proj.center([-73.5878, 45.5088]) // Center on Montreal
         .scale(1000)
@@ -50,9 +50,17 @@ function map (geojson, dataM){
         .data(geojson.features)
         .enter().append("path")
         .attr("d", d => path(d))
-        .attr('stroke', 'black')
+        .attr('stroke', 'grey')
         .attr('fill', 'none')      
         
+
+    container.selectAll("path")
+        .data(geobase.features)
+        .enter().append("path")
+        .attr("d", d => path(d))
+        .attr('stroke', 'lightgrey')
+        .attr('fill', 'none')    
+
 
     console.log("categorie 1: " + (dataM[0].category.fr));
     console.log("categorie 2: " + (dataM[1].category.fr));
@@ -95,52 +103,39 @@ function map (geojson, dataM){
 
 
 Promise.all([
-    //d3.json('https://picasso.iro.umontreal.ca/~mona/api/artworks'),
-    //d3.json('https://picasso.iro.umontreal.ca/~mona/api/places'),
-    //d3.json('https://data.montreal.ca/dataset/41fcc790-e328-44be-bcbf-73556fa0bc32/resource/b0a6cfa4-ad77-4f5b-bd1b-050fe233a31f/download/patrimoinelpc.geojson'),
-    d3.json('https://data.montreal.ca/dataset/00bd85eb-23aa-4669-8f1b-ba9a000e3dd8/resource/e9b0f927-8f75-458c-8fda-b5da65cc8b73/download/limadmin.geojson'),
-    d3.json('../data/artworks.json'),
-    d3.json('../data/places.json'),
-    d3.json('../data/patrimoine-centroid.geojson')
-  ]).then(([geomtl, art, lieu, pat]) => {
+    d3.json('../data/limadmin.geojson'),
+    d3.json('../data/geobaseMTL.json'),
+    d3.json('../data/artworks_v3_2022-07-22.json'),
+    d3.json('../data/places_2022-07-08.json'),
+    d3.json('../data/heritages_2022-07-08.json')
+  ]).then(([geomtl, geobasemtl, art, lieu, pat]) => {
 
 
 //créer un dataset avec toutes les données à cartographier
     var dataMONA = [];
 
-    console.log(lieu.data[0])
-    console.log(art.data[0])
-    console.log(pat.features[0])
-    lieu.data.shift();
-    lieu.data.forEach(l => {
+    console.log(lieu[0])
+    console.log(art[0])
+    console.log(pat[0])
+    lieu.shift();
+    lieu.forEach(l => {
         l.typeMONA = "lieu"
         dataMONA.push(l)
     });  
-    art.data.forEach(a => {
+    art.forEach(a => {
         a.typeMONA = "art"
         dataMONA.push(a)
     });
-    const startid = dataMONA.length
-    var i = 1;
-    pat.features.forEach(p => {
-        p.id = startid + i;
-        p.title = p.properties.Nom;
-        p.location = {
-            lat: p.geometry.coordinates[1],
-            lng: p.geometry.coordinates[0]
-        }
-        p.category = {
-            fr: "patrimoine - ville de Montréal",
-            en: "Montreal city heritage"
-        };    
+
+    pat.forEach(p => {
         p.typeMONA = "patrimoine";
 
         dataMONA.push(p)
-        i++;
+
     })
     console.log(dataMONA)
 
-    map(geomtl, dataMONA);
+    map(geomtl, geobasemtl, dataMONA);
 
   }).catch(function(error) {
     console.log(error);
