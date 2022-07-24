@@ -41,15 +41,16 @@ function showDetails (d){
   
     if (d.typeMONA == "art"){
         title = d.title.fr;
-        var artistes = "Nom artiste"
-        //d.artists.forEach(a => artistes = artistes.concat(a.name).concat(" "));
+        var artistes = "";
+        d.artists.forEach(a => artistes = artistes.concat(a.name).concat(" "));
         var cat =""
         d.categories.fr.forEach(c => cat = cat + c + " ")
        
         contenu = `
-                <p>${artistes} (${d.produced_at.substr(0,10)})
+                <p>${artistes}</p>
+                <p>${d.produced_at.substr(0,10)}</p>
                 <p>${cat}</p>
-                <a href="${d.url.fr? d.url.fr : ""}" target="_blank">web</a>
+                <a href="${d.url? d.url.fr : ""}" target="_blank">web</a>
                 `
     }
     else if (d.typeMONA == "lieu"){
@@ -78,27 +79,36 @@ function showDetails (d){
     `)
   }
 
-function map (geojson, geobase, dataM){
+function map (geoMTL, geoQC, geobaseMTL, dataM){
 
     proj.center([-73.5878, 45.5088]) // Center on Montreal
         .scale(1000)
-        .fitSize([width, height], geojson);
+        .fitSize([width, height], geoMTL);
 
     path.projection(proj);
 
 
 
-//layer départements
+//layer arrondissements MTL
     container.selectAll("path")
-        .data(geojson.features)
+        .data(geoMTL.features)
         .enter().append("path")
         .attr("d", d => path(d))
         .attr('stroke', 'grey')
         .attr('fill', 'none')      
         
-
+//layer municipalités QC
+/*
     container.selectAll("path")
-        .data(geobase.features)
+    .data(geoQC.features)
+    .enter().append("path")
+    .attr("d", d => path(d))
+    .attr('stroke', 'grey')
+    .attr('fill', 'none')      
+*/
+//layer réseau routier MTL
+    container.selectAll("path")
+        .data(geobaseMTL.features)
         .enter().append("path")
         .attr("d", d => path(d))
         .attr('stroke', 'lightgrey')
@@ -165,12 +175,13 @@ function map (geojson, geobase, dataM){
 
 
 Promise.all([
-    d3.json('../data/limadmin.geojson'),
-    d3.json('../data/geobaseMTL.json'),
-    d3.json('../data/artworks_v3_2022-07-22.json'),
+    d3.json('../data/MTLarrondissements.geojson'),
+    d3.json('../data/MTLgeobase.json'),
+    d3.json('../data/QCmunicipalites.geojson'),
+    d3.json('../data/artworks_v3_2022-07-23.json'),
     d3.json('../data/places_2022-07-08.json'),
     d3.json('../data/heritages_2022-07-08.json')
-  ]).then(([geomtl, geobasemtl, art, lieu, pat]) => {
+  ]).then(([geomtl, geobasemtl, geoqc, art, lieu, pat]) => {
 
 
 //créer un dataset avec toutes les données à cartographier
@@ -197,7 +208,7 @@ Promise.all([
     })
     console.log(dataMONA)
 
-    map(geomtl, geobasemtl, dataMONA);
+    map(geomtl, geoqc, geobasemtl, dataMONA);
 
   }).catch(function(error) {
     console.log(error);
