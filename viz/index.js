@@ -79,7 +79,7 @@ function showDetails (d){
     `)
   }
 
-function map (geoMTL, geoQC, geobaseMTL, dataM){
+function map (geoMTL, geobaseMTL, dataM){
 
     proj.center([-73.5878, 45.5088]) // Center on Montreal
         .scale(1000)
@@ -177,11 +177,10 @@ function map (geoMTL, geoQC, geobaseMTL, dataM){
 Promise.all([
     d3.json('../data/MTLarrondissements.geojson'),
     d3.json('../data/MTLgeobase.json'),
-    d3.json('../data/QCmunicipalites.geojson'),
     d3.json('../data/artworks_v3_2022-07-23.json'),
     d3.json('../data/places_2022-07-08.json'),
     d3.json('../data/heritages_2022-07-08.json')
-  ]).then(([geomtl, geobasemtl, geoqc, art, lieu, pat]) => {
+  ]).then(([geomtl, geobasemtl, art, lieu, pat]) => {
 
 
 //créer un dataset avec toutes les données à cartographier
@@ -208,7 +207,7 @@ Promise.all([
     })
     console.log(dataMONA)
 
-    map(geomtl, geoqc, geobasemtl, dataMONA);
+    map(geomtl, geobasemtl, dataMONA);
 
   }).catch(function(error) {
     console.log(error);
