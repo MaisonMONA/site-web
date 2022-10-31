@@ -242,3 +242,12 @@ blockquote {
     text-align: center;
     color: rgb(75, 74, 74);
 }
+.links-grid-3{
+    display: grid;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    color: rgb(75, 74, 74);
+}
