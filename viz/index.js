@@ -17,7 +17,7 @@ var proj = d3.geoConicConformal();
 const path = d3.geoPath();
 
 //couleurs des points
-const color = d3.scaleOrdinal(["art", "lieu", "patrimoine", "autre"], ["#FAE800", "#C1C4E4", "#FE7E61", "#010202"]) 
+const color = d3.scaleOrdinal(["art", "lieu", "patrimoine", "autre"], ["#FAE800", "#612B8D", "#FE7E61", "#010202"]) 
 
 //zone d'information associée à la souris
 const tooltip = d3.select("body").append("div")
@@ -87,7 +87,7 @@ function map (geoMTL, geobaseMTL, dataM){
 
     path.projection(proj);
 
-
+/*
 
 //layer arrondissements MTL
     container.selectAll("path")
@@ -98,7 +98,7 @@ function map (geoMTL, geobaseMTL, dataM){
         .attr('fill', 'none')      
         
 //layer municipalités QC
-/*
+
     container.selectAll("path")
     .data(geoQC.features)
     .enter().append("path")
@@ -129,7 +129,7 @@ function map (geoMTL, geobaseMTL, dataM){
         .attr("cx", d => proj([d.location.lng, d.location.lat])[0])
         .attr("cy", d => proj([d.location.lng, d.location.lat])[1])
         .attr("id", d => d.id)
-        .attr("r", "2px")
+        .attr("r", "3px")
         .attr("fill", d => color(d.typeMONA))
         .attr("opacity", 1)
         .on("mouseover", function(d) {
