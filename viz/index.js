@@ -96,7 +96,7 @@ function map (geoMTL, geobaseMTL, dataM){
         .attr("d", d => path(d))
         .attr('stroke', 'grey')
         .attr('fill', 'none')      
-        
+/*       
 //layer municipalités QC
 
     container.selectAll("path")
@@ -113,7 +113,6 @@ function map (geoMTL, geobaseMTL, dataM){
         .attr("d", d => path(d))
         .attr('stroke', 'lightgrey')
         .attr('fill', 'none')    
-
 
     console.log("categorie 1: " + (dataM[0].category.fr));
     console.log("categorie 2: " + (dataM[1].category.fr));
@@ -179,16 +178,17 @@ Promise.all([
     d3.json('../data/MTLgeobase.json'),
     d3.json('../data/artworks_v3_2022-07-23.json'),
     d3.json('../data/places_2022-07-08.json'),
-    d3.json('../data/heritages_2022-07-08.json')
-  ]).then(([geomtl, geobasemtl, art, lieu, pat]) => {
+    d3.json('../data/heritages_2022-07-08.json'),
+    d3.json('https://picasso.iro.umontreal.ca/~mona/api/badges'),
+  ]).then(([geomtl, geobasemtl, art, lieu, pat, badges]) => {
 
-
+console.log(badges)
 //créer un dataset avec toutes les données à cartographier
     var dataMONA = [];
 
-    console.log(lieu[0])
-    console.log(art[0])
-    console.log(pat[0])
+    console.log("exemple lieu", lieu[0])
+    console.log("exemple art", art[0])
+    console.log("exemple patrimoine", pat[0])
     lieu.shift();
     lieu.forEach(l => {
         l.typeMONA = "lieu"
