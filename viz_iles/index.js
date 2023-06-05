@@ -9,7 +9,8 @@ height = 900 - margin.top - margin.bottom;
 
 const svgCarte = d3.select("#carte")
 .attr("width", width + margin.left + margin.right)
-.attr("height", height + margin.top + margin.bottom);
+.attr("height", height + margin.top + margin.bottom)
+.style("background", "lightblue");;
 const container = svgCarte.append('g')
 
 //geo
@@ -94,7 +95,7 @@ function map (geo, dataM){
         .enter().append("path")
         .attr("d", d => path(d))
         .attr('stroke', 'grey')
-        .attr('fill', 'none')      
+        .attr('fill', '#E9D68E')      
  
     var circles = container.selectAll("circle");
 
@@ -183,7 +184,7 @@ Promise.all([
     })
     console.log(dataMONA)
 
-    var iles = dataMONA.filter(d => d.territory == "")
+    var iles = dataMONA.filter(d => d.territory == "Les Îles-de-la-Madeleine (Gaspésie--Îles-de-la-Madeleine)")
 
     map(geo, dataMONA);
 
