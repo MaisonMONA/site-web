@@ -80,7 +80,7 @@ function showDetails (d){
     `)
   }
 
-function map (geo, dataM){
+function map (geo, routes, dataM){
 
     proj.center([-73.5878, 45.5088]) // Center on Montreal
         .scale(9000)
@@ -89,14 +89,22 @@ function map (geo, dataM){
     path.projection(proj);
 
 
-//layer arrondissements MTL
+//îles
     container.selectAll("path")
         .data(geo.features)
         .enter().append("path")
         .attr("d", d => path(d))
-        .attr('stroke', 'grey')
-        .attr('fill', '#E9D68E')      
- 
+        .attr('fill', 'lightgrey')
+    
+
+ //routes
+    container.selectAll("path")
+        .data(routes.features)
+        .enter().append("path")
+        .attr("d", d => path(d))
+        .attr('stroke', 'darkgrey')
+        .attr('fill', 'none')   
+
     var circles = container.selectAll("circle");
 
     circles
@@ -154,10 +162,12 @@ function map (geo, dataM){
 
 Promise.all([
     d3.json('../data/iles_outline.geojson'),
+    d3.json('../data/iles_ReseauRoutier.json'),
     d3.json('../data/artworks_v3_2022-07-23.json'),
     d3.json('../data/places_2022-07-08.json'),
-    d3.json('../data/heritages_2022-07-08.json')
-  ]).then(([geo, art, lieu, pat]) => {
+    d3.json('../data/heritages_2022-07-08.json'),
+    d3.json('../data/iles_art.json')
+  ]).then(([geo, routes, art, lieu, pat, iles]) => {
 
 
 //créer un dataset avec toutes les données à cartographier
@@ -176,17 +186,28 @@ Promise.all([
         dataMONA.push(a)
     });
 
+    iles.forEach(i => {
+        i.typeMONA = "art"
+        i.title = i.artistes
+        i.artists = [i.artistes]
+        
+        i.categories ={
+            fr: ["1%"]
+        }
+        var geoloc = i.geoloc.split(",")
+        i.location = { lat: geoloc[0], lng: geoloc[1] }
+        dataMONA.push(i)
+    })
+
     pat.forEach(p => {
         p.typeMONA = "patrimoine";
-
         dataMONA.push(p)
 
     })
     console.log(dataMONA)
 
-    var iles = dataMONA.filter(d => d.territory == "Les Îles-de-la-Madeleine (Gaspésie--Îles-de-la-Madeleine)")
-
-    map(geo, dataMONA);
+    
+    map(geo, routes, dataMONA);
 
   }).catch(function(error) {
     console.log(error);
