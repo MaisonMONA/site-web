@@ -188,11 +188,12 @@ Promise.all([
 
     iles.forEach(i => {
         i.typeMONA = "art"
-        i.title = i.artistes
+        i.title = {
+            fr: i.address}
         i.artists = [i.artistes]
-        
+        i.produced_at = String(i.produced_at)
         i.categories ={
-            fr: ["1%"]
+            fr: [i.categories_fr]
         }
         var geoloc = i.geoloc.split(",")
         i.location = { lat: geoloc[0], lng: geoloc[1] }
