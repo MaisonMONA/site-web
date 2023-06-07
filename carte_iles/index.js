@@ -42,15 +42,15 @@ function showDetails (d){
   
     if (d.typeMONA == "art"){
         title = d.title.fr;
-        var artistes = "";
-        d.artists.forEach(a => artistes = artistes.concat(a.name).concat(" "));
+        
         var cat =""
         d.categories.fr.forEach(c => cat = cat + c + " ")
        
         contenu = `
-                <p>${artistes}</p>
+                <p>${d.artistes}</p>
                 <p>${d.produced_at.substr(0,10)}</p>
-                <p>${cat}</p>
+                <p>${cat.concat("; ").concat(d.accessibilities_fr)}</p>
+                <p>${d.place_fr.concat("; ").concat(d.address)}</p>
                 <a href="${d.url? d.url.fr : ""}" target="_blank">web</a>
                 `
     }
@@ -188,8 +188,10 @@ Promise.all([
 
     iles.forEach(i => {
         i.typeMONA = "art"
-        i.title = {
-            fr: i.address}
+        if (i.title_fr =="")
+            i.title = {fr: i.address}
+        else 
+            i.title = {fr: i.title_fr}
         i.artists = [i.artistes]
         i.produced_at = String(i.produced_at)
         i.categories ={

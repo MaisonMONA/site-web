@@ -322,7 +322,7 @@
     "accessibilities_en": ""
   },
   {
-    "title_fr": "",
+    "title_fr": "Nord et autres latitudes",
     "artistes": "François Mathieu",
     "source": "",
     "url": "",
@@ -460,7 +460,7 @@
     "accessibilities_en": ""
   },
   {
-    "title_fr": "",
+    "title_fr": "Fous du Golfe",
     "artistes": "Marianne Papillon",
     "source": "",
     "url": "",
@@ -483,7 +483,7 @@
     "accessibilities_en": ""
   },
   {
-    "title_fr": "",
+    "title_fr": "Vogare, l'écho qui berce",
     "artistes": "Émilie Rondeau",
     "source": "",
     "url": "",
@@ -573,5 +573,28 @@
     "directions_en": "",
     "accessibilities_fr": "situé à l’intérieur",
     "accessibilities_en": ""
-  }
+  },
+  {
+    "title_fr": "Monument aux pêcheurs",
+    "artistes": "Roger Langevin",
+    "source": "",
+    "url": "",
+    "description_fr": "",
+    "description_en": "",
+    "produced_at": 1990,
+    "producer": "",
+    "owner": "",
+    "acquisition_fr": "",
+    "categories_fr": "sculpture",
+    "dimensions": "",
+    "techniques_fr": "",
+    "materials_fr": "",
+    "geoloc": "47.37085605079301, -61.95649555344964",
+    "address": "501 Chemin Boisville",
+    "place_fr": "Aménagement portuaire de l'anse de l'Étang-du-Nord",
+    "directions_fr": "",
+    "directions_en": "",
+    "accessibilities_fr": "",
+    "accessibilities_en": ""
+  },
 ]
