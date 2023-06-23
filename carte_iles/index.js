@@ -115,7 +115,7 @@ function map (geo, routes, dataM){
         .attr("cx", d => proj([d.location.lng, d.location.lat])[0])
         .attr("cy", d => proj([d.location.lng, d.location.lat])[1])
         .attr("id", d => d.id)
-        .attr("r", "5px")
+        .attr("r", "2px")
         .attr("fill", d => color(d.typeMONA))
         .attr("opacity", 1)
         .on("mouseover", function(d) {
