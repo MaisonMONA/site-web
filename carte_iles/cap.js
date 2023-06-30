@@ -51,28 +51,10 @@ function showDetails (d){
                 <p>${d.produced_at.substr(0,10)}</p>
                 <p>${cat.concat("; ").concat(d.accessibilities_fr)}</p>
                 <p>${d.place_fr.concat("; ").concat(d.address)}</p>
+                <p>${d.description_fr ? d.description_fr : ""}</p>
                 <a href="${d.url? d.url.fr : ""}" target="_blank">web</a>
-                `
+                `  
     }
-    else if (d.typeMONA == "lieu"){
-
-        title = d.title;
-        contenu = `
-                  <p>${d.category.fr}</p>
-                  <p>${d.description}</p>`
-  
-    }
-    else if (d.typeMONA == "patrimoine"){
-        
-        title = d.title;
-        contenu = ` <p>${d.functions.fr}</p>
-                    <p>${d['sous-usages']}</p>
-                    <p>${d.territory}</p>
-                    <a href="${d.url? d.url : ""}" target="_blank">rpcq</a>
-                  <p>${d.description}</p>
-                  <p>${d.synthesis}</p>`
-    }
-  
   
     d3.select("#info").html(`
       <h3 style="background-color: ${color(d.typeMONA)}">${title}</h3>
@@ -80,11 +62,11 @@ function showDetails (d){
     `)
   }
 
-function map (geo, routes, dataM){
+function map (geo, routes, poly, dataM){
 
-    proj.center([61.85, 47.37]) // Center on Montreal
+    proj.center([61.85, 47.37])
         .scale(9000)
-        .fitSize([width, height], geo);
+        .fitSize([width, height], poly);
 
     path.projection(proj);
 
@@ -95,16 +77,18 @@ function map (geo, routes, dataM){
         .enter().append("path")
         .attr("d", d => path(d))
         .attr('fill', 'lightgrey')
-    
+
+// poly 
 
  //routes
     container.selectAll("path")
-        .data(routes.features)
-        .enter().append("path")
-        .attr("d", d => path(d))
-        .attr('stroke', 'white')
-        .attr('fill', 'none')   
+    .data(routes.features)
+    .enter().append("path")
+    .attr("d", d => path(d))
+    .attr('stroke', 'white')
+    .attr('fill', 'none')   
 
+//art    
     var circles = container.selectAll("circle");
 
     circles
@@ -115,7 +99,7 @@ function map (geo, routes, dataM){
         .attr("cx", d => proj([d.location.lng, d.location.lat])[0])
         .attr("cy", d => proj([d.location.lng, d.location.lat])[1])
         .attr("id", d => d.id)
-        .attr("r", "4px")
+        .attr("r", "6px")
         .attr("fill", d => color(d.typeMONA))
         .attr("opacity", 1)
         .on("mouseover", function(d) {
@@ -162,26 +146,14 @@ function map (geo, routes, dataM){
 
 Promise.all([
     d3.json('../data/iles_outline.geojson'),
-    d3.json('../data/iles_routesOSM.geojson'),
-    d3.json('../data/places_2023-06-30.json'),
-    d3.json('../data/heritages_2022-07-08.json'),
-    d3.json('../data/iles_art_2023-06-30.json')
-  ]).then(([geo, routes, lieu, pat, iles]) => {
+    d3.json('../data/cap_routesOSM.geojson'),
+    d3.json('../data/iles_art_2023-06-30.json'),
+    d3.json('../data/cap_poly.geojson'),
+  ]).then(([geo, routes, iles, poly]) => {
 
 
 //créer un dataset avec toutes les données à cartographier
     var dataMONA = [];
-
-    lieu.filter(d => d.territory.includes("(Gasp\u00e9sie--\u00celes-de-la-Madeleine)")).forEach(l => {
-        l.typeMONA = "lieu"
-        dataMONA.push(l)
-    });  
-
-    pat.filter(d => d.territory.includes("(Gaspésie--Îles-de-la-Madeleine)")).forEach(p => {
-        p.typeMONA = "patrimoine";
-        dataMONA.push(p)
-
-    })
 
     iles.forEach(i => {
         i.typeMONA = "art"
@@ -202,7 +174,7 @@ Promise.all([
     console.log(dataMONA)
 
     
-    map(geo, routes, dataMONA);
+    map(geo, routes, poly, dataMONA);
 
   }).catch(function(error) {
     console.log(error);
