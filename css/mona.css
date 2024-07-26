@@ -242,7 +242,7 @@ blockquote {
     margin: 10px auto 20px;
     display: block;
 }
-.links-grid{
+.links-grid{ /*4*/
     display: grid;
     width: 100%;
     padding-left: 10%;
@@ -251,15 +251,41 @@ blockquote {
     text-align: center;
     color: rgb(75, 74, 74);
 }
-.links-grid-3{
+.links-grid-2{
     display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
-    grid-template-columns: auto auto auto;
     text-align: center;
     color: rgb(75, 74, 74);
 }
+
+.links-grid-3-text{
+    margin: 15px;
+    padding: 1.5em 0;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: grid;
+    width: fill;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    color: rgb(75, 74, 74);
+}
+
+.links-grid-3{
+    display: grid;
+    width: 100%;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    color: rgb(75, 74, 74);
+}
+
 
 .links-grid-5{
     display: grid;
@@ -270,3 +296,25 @@ blockquote {
     text-align: center;
     color: #6c757d;;
 }
+
+.box {
+    margin: 15px;
+    padding: 1.5em ;
+    background-color: #FFFFFF;
+    border-radius: 15px;
+}
+
+.linktree {
+    width: 100%;
+    background-color: #000000;
+    border-radius: 25px;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.linktree > a {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 16px;
+}
+

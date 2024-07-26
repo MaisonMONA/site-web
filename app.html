@@ -25,14 +25,16 @@
 <body>
   <style>
       body{
+          max-width: 600px;
           padding: 3em;
           height: 100vh;
-          border: solid 6pt #fae800;
+          background-color: #fae800;
+          /*border: solid 6pt #fae800;*/
       }
 
       p{
         text-align: center;
-        font-size: 14pt;
+        font-size: 20px;
         line-height: 24pt;
       }
 
@@ -48,22 +50,17 @@
         color: rgb(75, 74, 74);
       }
 
-      #top-img{
-        margin-top: 5vh;
-      }
 
       #zone-texte{
         overflow-x: scroll;
         max-height: 50vh;
         display: grid;
-        margin-bottom: 2em;
       }
 
       #zone-image{
         height: 15vh;
         display: grid;
         margin-top: 1rem;
-        margin-bottom: 1rem;
       }
 
       footer{
@@ -74,8 +71,9 @@
    
 
       #section > p{
-        font-size: 11pt;
-        line-height: 14pt;
+        font-size: 16px;
+        line-height: 16pt;
+        margin-bottom: 2em;
       }
 
       .store-icons-here {
@@ -93,44 +91,56 @@
 
   </style>
 
-  <a id="top-img" class="store-icons" href="./index.html">
-    <img src="./img/logo.png" width="32%"
-  /></a>
-    <div id="zone-texte">
-      <p class="grid-item">
-          une application mobile gratuite qui invite à la découverte de l'art, des lieux culturels et du patrimoine au Québec.</p>
-
-      <div id="section">
+  <div class="box">
+    <a id="top-img" class="store-icons" href="./index.html">
+      <img src="./img/logo.png" width="50%"
+    /></a>
+      <div id="zone-texte" >
         <p class="grid-item">
-          Faites des découvertes culturelles et prenez-les en photo pour les ajouter à votre collection personnelle. Évaluez votre expérience en ajoutant vos propres notes et commentaires. En vous promenant à travers les quartiers de votre ville, relevez les défis proposés et accumulez les reconnaissances.
-        </p>
-    
-      </div>
-    </div>
-    
-    <div id="zone-image">
-      <div class="grid-item">
-          <a
-            href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr"
-          >
-            <img src="img/AppStore.png" class="img-small " width="150px" />
-          </a>
-      </div>
-      <div class="grid-item">
-        <a
-        href="https://play.google.com/store/apps/details?id=com.maison.mona"
-        ><img src="img/GooglePlay.png" class="img-small" width="150px"
-      /></a>
-      </div>
-    </div>
+            Une application mobile gratuite pour découvrir l'art public, les lieux culturels et le patrimoine du Québec.</p>
   
-  <hr>
+        <div id="section">
+          <p class="grid-item">
+            Découvrez, photographiez et ajoutez à votre collection. Évaluez votre expérience avec des notes et commentaires. Promenez-vous, relevez des défis et accumulez des reconnaissances.
+          </p>
+      
+        </div>
+      </div>
+      
+      <div class="links-grid-2">
+        <div >
+            <a href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr">
+              <img src="img/AppStore.png" class="img-small" width="150px" />
+            </a>
+        </div>
+        <div>
+          <a href="https://play.google.com/store/apps/details?id=com.maison.mona">
+            <img src="img/GooglePlay.png" class="img-small" width="150px"/>
+          </a>
+        </div>
+      </div>
 
-  <footer class="links-grid" style="font-size: small;">
-    <a href="./index.html"><img src="/img/web.png" alt="lien vers la page d'accueil du site web MONA"></a>
-    <a href="mailto:info@monamontreal.org"><img src="/img/e-mail.png" alt="adresse courriel"></a>
-    <a href="https://www.instagram.com/mona.artpublic/"><img src="/img/insta.png" alt="lien instagram"></a>
-    <a href="https://www.facebook.com/MONA.ArtPublic"><img src="/img/fb.png" alt="lien facebook"></a>
-  </footer>
+  </div>
+
+  <div class="box">
+    <div class="linktree" style="margin-bottom: 1em;" >
+      <!---->
+      <a href="https://monamontreal.org/" ><img src="/img/button_web.png" alt="icone web"> Visiter le site internet</a>
+    </div>
+    <div class="linktree" style="margin-bottom: 1em;">
+      <a href="mailto:info@monamontreal.org"><img src="/img/button_email.png" alt="icone web"> Écrivez-nous</a>
+    </div>
+    <div class="linktree" >
+      <a href="https://www.zeffy.com/fr-CA/ticketing/7389116a-ca1a-49e4-8190-2007d4f5275e"><img src="/img/button_map.png" alt="icone web"> Prochain parcours public</a>  
+    </div>
+  </div>
+  
+  <div class="links-grid-3-text">
+    <p class="grid-3-text-element" style="padding-top: 10px;">Suivez-nous!</p>
+    <a class="grid-3-text-element" href="https://www.facebook.com/MONA.ArtPublic"><img src="/img/button_FB.png"></a>
+    <a class="grid-3-text-element" href="https://www.instagram.com/mona.artpublic/"><img src="/img/button_IG.png"></a>
+    
+    
+  </div>
 
 </body>
