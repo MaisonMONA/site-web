@@ -276,6 +276,19 @@ blockquote {
     color: rgb(75, 74, 74);
 }
 
+.links-grid-4-text{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: grid;
+    width: fill;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    color: rgb(75, 74, 74);
+}
+
+
 .links-grid-3{
     display: grid;
     width: 100%;
