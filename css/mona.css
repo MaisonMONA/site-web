@@ -320,7 +320,7 @@ blockquote {
 .linktree {
     width: 100%;
     background-color: #000000;
-    border-radius: 25px;
+    border-radius: 8px;
     text-align: center;
     padding: 1em 0;
 }
