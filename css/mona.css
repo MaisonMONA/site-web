@@ -31,7 +31,7 @@ h5, h6 {
 }
 
 .mona-purple-text {
-    color:  #670BCF;
+    color:  #2E398E;
 }
 
 .mona-light-purple {
@@ -57,7 +57,10 @@ h5, h6 {
 }
 
 a {
-    color: #670BCF;
+    color: #2E398E;;
+}
+a:hover {
+    color: #670BCF
 }
 
 
@@ -251,6 +254,14 @@ blockquote {
     text-align: center;
     color: rgb(75, 74, 74);
 }
+
+.grid-2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 50px;
+    width: 100%;
+}
+
 .links-grid-2{
     display: grid;
     grid-template-columns: auto auto;
