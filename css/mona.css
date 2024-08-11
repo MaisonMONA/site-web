@@ -31,7 +31,7 @@ h5, h6 {
 }
 
 .mona-purple-text {
-    color:  #670BCF;
+    color:  #2E398E;
 }
 
 .mona-light-purple {
@@ -57,7 +57,10 @@ h5, h6 {
 }
 
 a {
-    color: #670BCF;
+    color: #2E398E;;
+}
+a:hover {
+    color: #670BCF
 }
 
 
@@ -251,6 +254,14 @@ blockquote {
     text-align: center;
     color: rgb(75, 74, 74);
 }
+
+.grid-2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    gap: 50px;
+    width: 100%;
+}
+
 .links-grid-2{
     display: grid;
     grid-template-columns: auto auto;
@@ -275,6 +286,19 @@ blockquote {
     text-align: center;
     color: rgb(75, 74, 74);
 }
+
+.links-grid-4-text{
+    background-color: #FFFFFF;
+    border-radius: 15px;
+    display: grid;
+    width: fill;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 15px;
+    text-align: center;
+    color: rgb(75, 74, 74);
+}
+
 
 .links-grid-3{
     display: grid;
@@ -307,7 +331,7 @@ blockquote {
 .linktree {
     width: 100%;
     background-color: #000000;
-    border-radius: 25px;
+    border-radius: 8px;
     text-align: center;
     padding: 1em 0;
 }
@@ -318,3 +342,13 @@ blockquote {
     font-size: 16px;
 }
 
+.carousel-legend {
+    position: absolute; 
+    bottom: -16px;
+    height: 50px;
+    width: 100%;
+    text-align: right;
+    background-color: white;
+    padding-right: 5px;
+
+}
