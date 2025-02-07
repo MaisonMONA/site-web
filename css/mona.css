@@ -51,7 +51,14 @@ h5, h6 {
     margin-right: auto;
 }
 
-.mona-button:hover {
+.mona-button-offre {
+    background-color: #e2e4f3;
+    width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.mona-button:hover, .mona-button-offre:hover {
     background-color: #670BCF;
     color: #e6e6e6;
 }
