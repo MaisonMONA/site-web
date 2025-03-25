@@ -1,9 +1,11 @@
 body{
     font-family: "Open Sans";
+    font-size: 16px;
     display: block;
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
+    background-color: #F5F5F5;
 }
 
 h1, h2, h3, h4 {
@@ -20,10 +22,12 @@ h5, h6 {
 
 .mona-yellow {
     background-color: #FBE900;
+    max-width: none;
 }
 
 .mona-light-yellow {
-    background-color: #FFEE89;
+    background-color: #FCEC80;
+    width: fill;
 }
 
 .mona-purple {
@@ -46,6 +50,7 @@ h5, h6 {
 
 .mona-button {
     background-color: #e2e4f3;
+    text-decoration: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -53,6 +58,7 @@ h5, h6 {
 
 .mona-button-offre {
     background-color: #e2e4f3;
+    text-decoration: none;
     width: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -64,7 +70,9 @@ h5, h6 {
 }
 
 a {
-    color: #2E398E;;
+    color: #2E398E;
+    text-decoration-line: underline;
+    
 }
 a:hover {
     color: #670BCF
@@ -78,38 +86,49 @@ a:hover {
 }
 
 nav {
-    background-color: #C0C4E4;
-    font-weight: 600;
-    font-size: 0.9em;
-    margin-bottom: 550px;
+    line-height: 16px;
+    background-color: #F5F5F5;
+    color: #000;
+    box-shadow: 0px 2px 6px 2px #00000026, 0px 1px 2px 0px #0000004D;
 }
 
 a.nav-link {
-    color: #262829
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
 }
+
+.dropdown-menu {
+    background-color: #F5F5F5;
+   
+}
+.dropdown-item {
+    text-decoration: none;
+   
+}
+
 
 header {
     margin-top: 40px;
 }
 
 footer {
-    color: white
+    color: F5F5F5
 }
 footer a{
     color: #C0C4E4
 }
 footer a:hover{
-    color: white
+    color: #F5F5F5
 }
+
 .card {
-    border-color: #e2e4f3;
+    border: none;
 }
 
 .card-header {
     text-align: center;
     font-weight: 600;
     font-size: larger;
-    border-color: #e2e4f3;
 }
 
 
@@ -283,7 +302,7 @@ blockquote {
 .links-grid-3-text{
     margin: 15px;
     padding: 1.5em 0;
-    background-color: #FFFFFF;
+    background-color: #F5F5F5;
     border-radius: 15px;
     display: grid;
     width: fill;
@@ -295,7 +314,7 @@ blockquote {
 }
 
 .links-grid-4-text{
-    background-color: #FFFFFF;
+    background-color: #F5F5F5;
     border-radius: 15px;
     display: grid;
     width: fill;
@@ -331,7 +350,15 @@ blockquote {
 .box {
     margin: 15px;
     padding: 1.5em ;
-    background-color: #FFFFFF;
+    background-color: #F5F5F5;
+    border-radius: 15px;
+}
+
+
+.yellow-box {
+    padding: 1em ;
+    padding-left: 2em ;
+    background-color: #FDF4B4;
     border-radius: 15px;
 }
 
@@ -344,7 +371,7 @@ blockquote {
 }
 
 .linktree > a {
-    color: #FFFFFF;
+    color: #F5F5F5;
     font-weight: 600;
     font-size: 16px;
 }
@@ -355,7 +382,12 @@ blockquote {
     height: 50px;
     width: 100%;
     text-align: right;
-    background-color: white;
+    background-color: #F5F5F5;
     padding-right: 5px;
 
+}
+
+.larger-text {
+    font-size: 24px;
+    font-weight: 400;
 }
