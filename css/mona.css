@@ -4,6 +4,7 @@ body{
     margin-left: auto;
     margin-right: auto;
     max-width: 1200px;
+    background-color: #F5F5F5;
 }
 
 h1, h2, h3, h4 {
@@ -78,10 +79,12 @@ a:hover {
 }
 
 nav {
-    background-color: #C0C4E4;
+    background-color: #F5F5F5;
     font-weight: 600;
-    font-size: 0.9em;
+    font-size: 14px;
+    line-height: 16px;
     margin-bottom: 550px;
+    box-shadow: 0px 2px 6px 2px #00000026, 0px 1px 2px 0px #0000004D;
 }
 
 a.nav-link {
