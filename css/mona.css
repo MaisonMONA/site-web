@@ -1,5 +1,6 @@
 body{
     font-family: "Open Sans";
+    font-size: 16px;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -21,10 +22,12 @@ h5, h6 {
 
 .mona-yellow {
     background-color: #FBE900;
+    max-width: none;
 }
 
 .mona-light-yellow {
-    background-color: #FFEE89;
+    background-color: #FCEC80;
+    width: fill;
 }
 
 .mona-purple {
@@ -47,6 +50,7 @@ h5, h6 {
 
 .mona-button {
     background-color: #e2e4f3;
+    text-decoration: none;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -54,6 +58,7 @@ h5, h6 {
 
 .mona-button-offre {
     background-color: #e2e4f3;
+    text-decoration: none;
     width: 300px;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -65,7 +70,9 @@ h5, h6 {
 }
 
 a {
-    color: #2E398E;;
+    color: #2E398E;
+    text-decoration-line: underline;
+    
 }
 a:hover {
     color: #670BCF
@@ -86,12 +93,19 @@ nav {
 }
 
 a.nav-link {
-    color: rgba(0, 0, 0, 1)
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
 }
 
 .dropdown-menu {
     background-color: #F5F5F5;
+   
 }
+.dropdown-item {
+    text-decoration: none;
+   
+}
+
 
 header {
     margin-top: 40px;
@@ -340,6 +354,14 @@ blockquote {
     border-radius: 15px;
 }
 
+
+.yellow-box {
+    padding: 1em ;
+    padding-left: 2em ;
+    background-color: #FDF4B4;
+    border-radius: 15px;
+}
+
 .linktree {
     width: 100%;
     background-color: #000000;
@@ -363,4 +385,9 @@ blockquote {
     background-color: #F5F5F5;
     padding-right: 5px;
 
+}
+
+.larger-text {
+    font-size: 24px;
+    font-weight: 400;
 }
