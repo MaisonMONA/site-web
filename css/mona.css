@@ -172,6 +172,11 @@ footer a:hover{
     padding: 10px;
 }
 
+.appMockup-small {
+    height: 25rem;
+    padding: 10px;
+}
+
 .imgStyle {
     display: block;
     margin-top: auto;
@@ -399,9 +404,15 @@ blockquote {
     padding-bottom: 2em;
 }
 
-#appView {
-    background: url("../img/line.png") repeat-y top;
-}  
+@media only screen and (min-width: 980px) {
+    #appView {
+        background: url("../img/line.png") repeat-y top;
+    }  
+    
+    #extra-mockups{
+        display: none;
+    }
+}
 
 /*    top: 1830.44px;
 left: -1032.62px;
