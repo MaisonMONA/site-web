@@ -181,6 +181,7 @@ footer a:hover{
     margin-bottom: auto;
 }
 
+
 .textStyle {
     display: block;
     margin-left: auto;
@@ -271,6 +272,15 @@ blockquote {
     margin: 10px auto 20px;
     display: block;
 }
+
+.press-links-grid {
+    display: grid;
+    width: 100%;
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-columns: 15% 75%
+}
+
 .links-grid{ /*4*/
     display: grid;
     width: 100%;
@@ -364,10 +374,18 @@ blockquote {
 
 .linktree {
     width: 100%;
-    background-color: #000000;
     border-radius: 8px;
     text-align: center;
     padding: 1em 0;
+    text-decoration: none;
+}
+
+.round-thumbnail-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 25px;
+    
 }
 
 .linktree > a {
