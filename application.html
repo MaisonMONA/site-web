@@ -26,7 +26,7 @@
     <link href="css/mona.css" rel="stylesheet" />
   </head>
 
-  <body>
+  <body id="appView">
     <!-- Navbar du site -->
 
 <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top">
@@ -81,269 +81,110 @@
     </div>
   </nav>
 
-    <div class="container">
+    <div class="container" >
       <!--bannière info base-->
-      <header class="textStyle" style="max-width: 980px">
-          <div class="row justify-content-md-center align-items-center">
-            <div class="col col-lg-6 imgStyle">
-              <div
-                id="carouselTutoriel"
-                class="carousel slide"
-                data-ride="carousel"
-                data-interval="false"
-              >
-                <ol class="carousel-indicators">
-                  <li
-                    data-target="#carouselTutoriel"
-                    data-slide-to="0"
-                    class="active"
-                  ></li>
-                  <li data-target="#carouselTutoriel" data-slide-to="1"></li>
-                  <li data-target="#carouselTutoriel" data-slide-to="2"></li>
-                  <li data-target="#carouselTutoriel" data-slide-to="3"></li>
-                  <li data-target="#carouselTutoriel" data-slide-to="4"></li>
-                  <li data-target="#carouselTutoriel" data-slide-to="5"></li>
-                  <li data-target="#carouselTutoriel" data-slide-to="6"></li>
-                  <li data-target="#carouselTutoriel" data-slide-to="7"></li>
-                  <li data-target="#carouselTutoriel" data-slide-to="8"></li>
-                </ol>
-                <div class="carousel-inner" role="listbox">
-                  <div
-                    class="carousel-item active"
-                    style="background-image: url('./img/carouselTutoriel/1.jpg')"
-                  ></div>
-                  <div
-                    class="carousel-item"
-                    style="background-image: url('./img/carouselTutoriel/2.jpg')"
-                  ></div>
-                  <div
-                    class="carousel-item"
-                    style="background-image: url('./img/carouselTutoriel/3.jpg')"
-                  ></div>
-                  <div
-                    class="carousel-item"
-                    style="background-image: url('./img/carouselTutoriel/4.jpg')"
-                  ></div>
-                  <div
-                    class="carousel-item"
-                    style="background-image: url('./img/carouselTutoriel/5.jpg')"
-                  ></div>
-                  <div
-                    class="carousel-item"
-                    style="background-image: url('./img/carouselTutoriel/6.jpg')"
-                  ></div>
-                  <div
-                    class="carousel-item"
-                    style="background-image: url('./img/carouselTutoriel/7.jpg')"
-                  ></div>
-                  <div
-                    class="carousel-item"
-                    style="background-image: url('./img/carouselTutoriel/8.jpg')"
-                  ></div>
-                  <div
-                    class="carousel-item"
-                    style="background-image: url('./img/carouselTutoriel/9.jpg')"
-                  ></div>
-                </div>
-                <a
-                  class="carousel-control-prev"
-                  href="#carouselTutoriel"
-                  role="button"
-                  data-slide="prev"
-                >
-                  <span
-                    class="carousel-control-prev-icon"
-                    aria-hidden="true"
-                  ></span>
-                  <span class="sr-only mona-yellow">Précédent</span>
-                </a>
-                <a
-                  class="carousel-control-next"
-                  href="#carouselTutoriel"
-                  role="button"
-                  data-slide="next"
-                >
-                  <span
-                    class="carousel-control-next-icon"
-                    aria-hidden="true"
-                  ></span>
-                </a>
-              </div>
-            </div>
-    
-            <div class="col col-lg-6" id="appInfo">
-    
-              <h4 class="descript">
-                MONA est une application mobile gratuite qui invite à la découverte de
-                l'art et des lieux culturels au Québec.
-              </h4>
+      <header class="textStyle" style="max-width: 980px;">
 
-              <h5 class="descript">La ville devient votre terrain de jeu</h5>
-    
-              <p>
-                Recherchez des œuvres d'art et prenez-les en photo pour les ajouter
-                à votre collection personnelle. Évaluez votre expérience en ajoutant
-                vos propres notes et commentaires. En vous promenant à travers les
-                quartiers de votre ville, relevez les défis proposés et accumulez
-                les reconnaissances.
-              </p>
-    
-              <div class="store-icons">
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr"
-                >
-                  <img src="img/AppStore.png" class="img-small" width="150px" />
-                </a>
-                <a
-                  target="_blank"
-                  rel="noopener googlenoreferrer"
-                  href="https://play.google.com/store/apps/details?id=com.maison.mona"
-                  ><img src="img/GooglePlay.png" class="img-small" width="150px"
-                /></a>
-              </div>
-            </div>
-          </div>
-      
-      
-      
+        <h2 class="center-text">La ville devient votre terrain de jeu</h2>
+
+        <p class="center-text">Recherchez des œuvres d'art et prenez-les en photo pour les ajouter à votre collection personnelle.</p>
+
+       <img alt="Mockups de trois téléphones avec l'application mobile présentant une fiche découverte, la carte et la collection de démonstration" src="./img/app_mockups.png" id="mockups-app">
+
+       <p class="center-text larger-text">
+        MONA est une application mobile gratuite qui invite à la découverte de l'art et des lieux culturels au Québec.
+       </p>
+
+        <div class="store-icons">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr"
+          >
+            <img src="img/AppStore.png" class="img-small" width="150px" />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener googlenoreferrer"
+            href="https://play.google.com/store/apps/details?id=com.maison.mona"
+            ><img src="img/GooglePlay.png" class="img-small" width="150px"
+          /></a>
+        </div>
       </header>
 
-      
+ 
 
       <hr class="big-vertical-margin">
+<!--présentation onglets app-->     
 
-      <!--présentation onglets app-->
+
+<!--Carte-->
       <div class="row app">
         <div class="col-sm-8 order-sm-12">
-          <h3>
-            <img src="img/Application/nav/carte.png" class="appNav" /> La carte
-          </h3>
-
-          <p>
-            La carte vous invite découvrir les œuvres d'art et les lieux
-            culturels qui vous entourent. Les marqueurs jaunes représentent les
-            oeuvres d'art et ceux violets les lieux culturels. L'indicateur
-            <img
-              src="img/Application/icones/cible.svg"
-              height="18px"
-              class="inTextIcon"
-            />
-            vous permet de visualiser toutes vos cibles. Les éléments de votre
-            collections sont signalés par une étoile.
-          </p>
-
-          <p>
-            Utilisez les options de tris pour
-            afficher les marqueurs qui vous intéressent.
-            En cliquant sur un marqueur, vous affichez
-            la fiche de l'œuvre concernée. 
-          </p>
-
-          <p>
-            En autorisant l'application à accéder à votre géolicalisation, vous
-            pourrez vous situer en temps réel<img
-              src="img/Application/icones/localisation-user.svg"
-              height="18px"
-              class="inTextIcon"
-            />.
-          </p>
-
+          <h3>La Carte</h3>
+          <p>La carte vous invite découvrir les œuvres d'art, les lieux culturels et les sites patrimoniaux qui vous entourent. Utilisez les options de tri pour afficher les marqueurs qui vous intéressent. En cliquant sur un marqueur, vous affichez la fiche de la découverte concernée.</p>
+          <p>En autorisant l'application à accéder à votre géolicalisation, vous pourrez vous situer en temps réel.</p>
         </div>
+      
+    
         <div class="col-sm-4 order-sm-1">
-          <img
-            src="img/Application/mockups/MONA_mockups_carte.png"
-            class="appMockup"
-          />
+          <img src="img/Application/mockups/MONA_mockups_carte.png" class="appMockup" />
         </div>
-      </div>
-      <hr class="big-vertical-margin">
-      <div class="row app">
-        <div class="col-sm-8">
-          <h3>
-            <img src="img/Application/nav/odj.png" class="appNav" /> L'œuvre du
-            jour
-          </h3>
-
-          <p>
-            L'œuvre du jour vous propose une découverte quotidienne. Vous pouvez
-            cibler l'oeuvre, regarder son emplacement sur la carte, ou tout
-            simplement vous mettre en route pour aller la photographier!
-          </p>
-        </div>
-        <div class="col-sm-4">
-          <img
-            src="img/Application/mockups/MONA_mockups_odj.png"
-            class="appMockup"
-          />
-        </div>
-      </div>
-      <hr class="big-vertical-margin">
-      <div class="row app">
-        <div class="col-md-8 order-sm-12">
-          <h3>
-            <img src="img/Application/nav/oeuvre.png" class="appNav" /> La liste d'œuvres
-          </h3>
-
-          <p>
-            La liste présente toutes les oeuvres présentes sur l'application.
-            Accédez à leur détail, rangez-les par distance ou affichez-les selon
-            différentes options de tri.
-          </p>
-        </div>
-        <div class="col-md-4 order-sm-1">
-          <img
-            src="img/Application/mockups/MONA_mockups_liste.png"
-            class="appMockup"
-          />
-        </div>
-      </div>
-      <hr class="big-vertical-margin">
+      </div>      
+<!--Collection-->  
       <div class="row app">
         <div class="col-md-8">
-          <h3>
-            <img src="img/Application/nav/collection.png" class="appNav" /> La
-            collection
-          </h3>
-
-          <p>
-            La collection regroupe toutes vos découvertes. Vous y retrouverez
-            vos photographies, notes et commentaires.
-          </p>
-
-          <p>
-            Cette page vous permet également d'accéder aux badges récompensant
-            vos efforts de collectionneur·se MONA.
-          </p>
+          <h3>La Collection</h3>
+          <p>La collection regroupe toutes vos découvertes. Vous y retrouverez vos photographies, notes et commentaires.</p>
+          <p>Cette page vous permet également d'accéder aux badges récompensant vos efforts de collectionneur·se MONA.</p>
         </div>
         <div class="col-md-4">
-          <img
-            src="img/Application/mockups/MONA_mockups_collection.png"
-            class="appMockup"
-          />
+          <img src="img/Application/mockups/MONA_mockups_collection.png" class="appMockup"/>
         </div>
       </div>
-      <hr class="big-vertical-margin">
-      <div class="row app">
-        <div class="col-md-8 order-sm-12">
-          <h3>
-            <img src="img/Application/nav/autre.png" class="appNav" />
-            Autres
-          </h3>
 
-          <p>
-            Vous y retrouverez diverses
-            informations à propos de l'application et de son fonctionnement.
-          </p>
-        </div>
-        <div class="col-md-4 order-sm-1">
-          <img
-            src="img/Application/mockups/MONA_mockups_autre.png"
-            class="appMockup"
-          />
-        </div>
+<!--Annuaire-->
+    <div class="row app">
+      <div class="col-md-8 order-sm-12">
+        <h3>L'Annuaire</h3>
+        <p>L'annuaire regroupe toutes les découvertes sur l'application. Triez le contenu par distance ou affichez-les selon différentes options de tri et accédez aux fiches des découvertes.</p>
       </div>
+      <div class="col-md-4 order-sm-1">
+        <img src="img/Application/mockups/MONA_mockups_liste.png" class="appMockup"/>
+      </div>
+    </div>
+<!--Fiche-->
+  <div class="row app">
+    <div class="col-md-8">
+      <h3>Fiche de découverte</h3>
+      <p>Trouvez toutes les informations disponibles à propos de la découverte dans les onglets <i>Détails</i> et <i>À propos</i> et ajoutez-y vos propres commentaires quand vous la collectionnez.</p>
+    </div>
+    <div class="col-md-4 order-sm-1">
+      <img src="img/Application/mockups/MONA_mockups_fiche.png" class="appMockup"/>
+    </div>
+  </div>
+  </div>    
+    
+    <hr class="big-vertical-margin">
+    <div class="container" >
+      <div class="row">
+        
+        <div class="col-lg-4">
+          <h2>Téléchargez l'app dès maintenant </h2>
+          <div class="store-icons">
+            <a target="_blank" rel="noopener noreferrer" href="https://apps.apple.com/ca/app/MONA/id1462822498?l=fr">
+              <img src="img/AppStore.png" class="img-small" width="150px" />
+            </a>
+            <a target="_blank" rel="noopener googlenoreferrer" href="https://play.google.com/store/apps/details?id=com.maison.mona" ><img src="img/GooglePlay.png" class="img-small" width="150px"/></a>
+          </div>
+        </div>
+
+        <div class="col-lg-8" id="extra-mockups">
+          <img src="img/Application/mockups/MONA_mockups_carte.png" class="appMockup-small" />
+          <img src="img/Application/mockups/MONA_mockups_fiche.png" class="appMockup-small" />
+          <img src="img/Application/mockups/MONA_mockups_collection.png"  class="appMockup-small" />
+        </div>
+        
     </div>
     
     <!-- Footer -->
@@ -360,6 +201,8 @@
         
         <p class="m-0 text-center text-white">Partenaires: <a href="http://www.ART ET SITE.org/" class="text-white"> Art et site</a>, <a href="https://diro.umontreal.ca/accueil/" class="text-white"> DIRO</a>. <a href="./politique-confidentialite.html">Politique de confidentialité</a></p>     
       </div>
+      
+      
 
     </footer>
 
