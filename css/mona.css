@@ -357,6 +357,7 @@ blockquote {
     text-align: center;
     padding: 1em 0;
     text-decoration: none;
+    margin-bottom: 1em
 }
 
 .round-thumbnail-img {
