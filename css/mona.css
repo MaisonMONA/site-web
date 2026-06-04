@@ -346,7 +346,7 @@ blockquote {
 
 .yellow-box {
     padding: 1em ;
-    padding-left: 2em ;
+    padding-left: 2em;
     background-color: #FDF4B4;
     border-radius: 15px;
 }
@@ -423,12 +423,6 @@ blockquote {
     }
 }
 
-
-
-
-/*    top: 1830.44px;
-left: -1032.62px;
-border-width: 6px;
-transform: rotate(60.34deg)
-opacity: 0.6;
-*/
+#prog2026 :hover{
+    transform: scale(1.2);
+}
