@@ -33,49 +33,13 @@
 <body>
 
 
-  <!-- Navbar du site -->
+   <script>
+        fetch('/nav.html')
+            .then(res => res.text())
+            .then(data => document.getElementById('nav').innerHTML = data);
+  </script>
 
-  <nav class="navbar fixed-top navbar-expand-lg navbar-light fixed-top">
-    <div class="container">
-      <!--navbar gauche-->
-      <a class="navbar-brand" href="index.html">
-          <img src="./img/logo.png" height="40px"></a>
-          <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <!--navbar droite-->
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-          
-          <li class="nav-item">
-            <a class="nav-link" href="./apropos.html">À propos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./application.html">Application</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./activites.html">ACTIVITÉS</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="./blogue.html">Blogue</a>
-          </li>
-          <!-- en commentaire pour le moment
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Blog
-            </a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
-              <a class="dropdown-item" href="blog-home-1.html">Blog Home 1</a>
-            </div>
-          </li>-->
-          <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="nav"></div>
 
   <!-- Page Content -->
   <div class="container">
@@ -99,7 +63,7 @@
     <div >
       <h2>Politique de confidentialité</h2>
       
-      <p>MONA est un projet de recherche universitaire basé à l’Université de Montréal (Qc, CA). Comme nous le détaillons dans notre politique de confidentialité, les données que nous recueillons servent uniquement à la recherche académique. Ce projet entièrement non-commercial n&#39;implique aucun tiers.</p>
+      <p>L'application mobile MONA est un projet de recherche universitaire en collaboration entre la Maison MONA et l’Université de Montréal (Qc, CA). Comme nous le détaillons dans notre politique de confidentialité, les données que nous recueillons servent uniquement à la recherche académique. Ce projet entièrement non-commercial n&#39;implique aucun tiers.</p>
       
       <h5>Quelles données recueillons-nous ?</h5>
       <p>Nous attachons de l&#39;importance à la protection votre vie privée. Nous recueillons uniquement les données pertinentes pour notre recherche, c&#39;est-à-dire vos photographies, notes et commentaires des découvertes collectionnées. Ces données sont enregistrées dans nos serveurs universitaires et leur accès est limité à une version anonymisée pour le groupe de recherche <em>Art et site</em>.</p>
